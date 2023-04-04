@@ -23,10 +23,9 @@ module seq_adder(
       input_a_ff <= input_a;
       input_b_ff <= input_b;
       {carry, sum} <= input_a_ff + input_b_ff + carry;
-      output_ff <= {carry, sum};
+      salida <= {carry, sum};
     end
   end
-  
-  assign salida = output_ff;
+ 
 endmodule
 
