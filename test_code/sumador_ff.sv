@@ -3,7 +3,7 @@ module seq_adder(
   input logic rst,
   input logic [7:0] input_a,
   input logic [7:0] input_b,
-  output logic [8:0] output
+  output logic [8:0] salida
 );
   logic [7:0] sum;
   logic carry;
@@ -27,5 +27,5 @@ module seq_adder(
     end
   end
   
-  assign output = output_ff;
+  assign salida = output_ff;
 endmodule
