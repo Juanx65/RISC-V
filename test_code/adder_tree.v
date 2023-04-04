@@ -1,26 +1,4 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 06.01.2023 17:12:33
-// Design Name: 
-// Module Name: adder_tree_comb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
-module adder_tree_fp#(
+module adder_tree_fp #(
     parameter N = 4,
     parameter L = $clog2(N),
     parameter max_stage = L
@@ -40,10 +18,10 @@ module adder_tree_fp#(
             out = 0;
             for(stage=0; stage <= max_stage_temp; stage++)
             begin
-                out += 2**(max_stage-stage)*(8+stage);
+                out = out + (2**(max_stage-stage))*(8+stage);
             end
             return out;
-        end
+        endfunction
     endfunction
     
     function int index
@@ -56,11 +34,13 @@ module adder_tree_fp#(
     assign result = tree[N_bits-1 -: 8+max_stage];
     
     generate  
-        for(genvar stage=1; stage<=max_stage; stage++)
+        genvar stage;
+        genvar pos;
+        for(stage=1; stage<=max_stage; stage=stage+1)
         begin
-            for(genvar pos=0; pos<2**(max_stage-stage); pos++)
+            for(pos=0; pos<2**(max_stage-stage); pos=pos+1)
             begin
-                always_ff @(posedge clk)
+                always @(posedge clk)
                 begin
                     if(stage==1)  tree[index(stage, pos) +: (8+stage)] <= stage_zero[2*pos] + stage_zero[2*pos+1];
                     else tree[index(stage, pos) +: (8+stage)] <= tree[index(stage-1, 2*pos) +: (7+stage)] + tree[index(stage-1, 2*pos+1) +: (7+stage)];
@@ -69,3 +49,4 @@ module adder_tree_fp#(
         end
     endgenerate
 endmodule
+
