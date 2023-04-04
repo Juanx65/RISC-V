@@ -1,4 +1,4 @@
-module seq_adder_ff(
+module seq_adder(
   input logic clk,
   input logic rst,
   input logic [7:0] input_a,
