@@ -7,8 +7,8 @@ set target_library [list sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__ff_100C_1v65.d
 set symbol_library ""
 
 #read, analyze and elaborate the rtl code
-read_file -format sverilog {/home/usuario12/test1/sumador.sv}
-analyze -library WORK -format verilog {/home/usuario12/test1/sumador.sv}
+read_file -format sverilog {test_code/sumador.sv}
+analyze -library WORK -format verilog {test_code/sumador.sv}
 elaborate adder1bit -architecture verilog -library WORK
 analyze {}
 
@@ -23,11 +23,11 @@ compile -exact_map
 
 #report generation
 file mkdir report
-write -hierarchy -format verilog -output /home/usuario12/test1/report/sumador_gtlvl.v
-write_sdc -nosplit -version 2.0 /home/usuario12/test1/report/sumador.sdc
-report_area -hierarchy > /home/usuario12/test1/report/sumador.area
-report_timing > /home/usuario12/test1/report/sumador.timing
-report_power > /home/usuario12/test1/report/sumador.power
+write -hierarchy -format verilog -output report/sumador_gtlvl.v
+write_sdc -nosplit -version 2.0 report/sumador.sdc
+report_area -hierarchy > report/sumador.area
+report_timing > report/sumador.timing
+report_power > report/sumador.power
 
 #start GUI
 gui_start

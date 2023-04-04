@@ -1,2 +1,7 @@
 sky130_fd_sc_hd/*
 report/*
+*.pvl
+*.syn
+*.mr
+*.log
+*.svf
