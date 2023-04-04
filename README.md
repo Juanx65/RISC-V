@@ -97,7 +97,7 @@ por ahora se usaron datos de prueba.
 El archivo `logic_synthesis.tcl` se corre con el siguiente comando:
 
 ``` 
-dc_shell -f config_tcl.tcl
+dc_shell -f logic_synthesis.tcl
 ``` 
 
 Y como resultado despliega información en consola, así como datos respecto al timing, area, power, etc en la carpeta `report`.
