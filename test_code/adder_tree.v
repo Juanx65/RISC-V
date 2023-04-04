@@ -21,7 +21,7 @@ module adder_tree_fp #(
                 out = out + (2**(max_stage-stage))*(8+stage);
             end
             return out;
-        endfunction
+        end
     endfunction
     
     function int index
