@@ -1,17 +1,17 @@
 module seq_adder(
-  input logic clk,
-  input logic rst,
-  input logic [7:0] input_a,
-  input logic [7:0] input_b,
-  output logic [8:0] salida
+  input clk,
+  input rst,
+  input [7:0] input_a,
+  input [7:0] input_b,
+  output reg [8:0] salida
 );
-  logic [7:0] sum;
-  logic carry;
-  logic [7:0] input_a_ff;
-  logic [7:0] input_b_ff;
-  logic [8:0] output_ff;
+  reg [7:0] sum;
+  reg carry;
+  reg [7:0] input_a_ff;
+  reg [7:0] input_b_ff;
+  reg [8:0] output_ff;
   
-  always_ff @(posedge clk)
+  always @(posedge clk)
   begin
     if (rst) begin
       sum <= 8'b0;
@@ -29,3 +29,4 @@ module seq_adder(
   
   assign salida = output_ff;
 endmodule
+
