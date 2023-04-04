@@ -1,22 +1,31 @@
-module seq_adder(
+module seq_adder_ff(
   input logic clk,
   input logic rst,
   input logic [7:0] input_a,
   input logic [7:0] input_b,
-  output logic [8:0] salida
+  output logic [8:0] output
 );
   logic [7:0] sum;
   logic carry;
+  logic [7:0] input_a_ff;
+  logic [7:0] input_b_ff;
+  logic [8:0] output_ff;
   
   always_ff @(posedge clk)
   begin
     if (rst) begin
       sum <= 8'b0;
       carry <= 1'b0;
+      input_a_ff <= '0;
+      input_b_ff <= '0;
+      output_ff <= '0;
     end else begin
-      {carry, sum} <= input_a + input_b + carry;
+      input_a_ff <= input_a;
+      input_b_ff <= input_b;
+      {carry, sum} <= input_a_ff + input_b_ff + carry;
+      output_ff <= {carry, sum};
     end
   end
   
-  assign salida = {carry, sum};
+  assign output = output_ff;
 endmodule
