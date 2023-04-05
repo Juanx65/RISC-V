@@ -127,7 +127,7 @@ hasta aqui llegamos.
 
 ## VSCode SSH connection
 
-* Install `Remote -SSH` and `Remote X11 (SSH)` extension
+* Install `Remote -SSH`, `Remote X11` and `Remote X11 (SSH)` extension
 * Open command palette > Remote-SSH: Open SSH Configuration File.. > .../.ssh/config
 * Edit it as follows:
 
@@ -139,6 +139,27 @@ hasta aqui llegamos.
             ForwardAgent yes
             ForwardX11 yes
             ForwardX11Trusted yes
-            XAuthLocation C:\Program Files\VcXsrv\xauth.exe
+            XAuthLocation "C:\Program Files\VcXsrv\xauth.exe"
 * In VSC `Settings`, be sure to have `Remote X11.SSH: Private Key` set as the `IdentityFile` from the previous step
 
+*  In VSC `Settings`, be sure to have `Remote X11.SSH: XAuth Permission Level` as `trusted` 
+
+<div align="center">
+      <a href="">
+     <img
+      src="img_readme/ssh-comfig.png"
+      alt="configuracion rsa key vsc settings"
+      style="width:85%;">
+      </a>
+</div>
+
+* In VSC `Settings` be sure to have `Remote X11.SHH: Enable` selected.
+
+<div align="center">
+      <a href="">
+     <img
+      src="img_readme/x11_enabled.png"
+      alt="enable x11"
+      style="width:50%;">
+      </a>
+</div>
