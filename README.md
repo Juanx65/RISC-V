@@ -105,23 +105,32 @@ Y como resultado despliega información en consola, así como datos respecto al 
 
 hasta aqui llegamos.
 
-# EXTRAS - WINDOWS 10/11
+# EXTRAS - WINDOWS 10/11 SYNOPSYS SERVER CONNECTION
 
-## RSA KEY GENERATION
+
+## MobaXterm Connection
+
+# algun dia lo explico si es necesario para ser auto contenido...
+
+
+## RSA KEY GENERATION - Needed for SSH Connection with VSC
 
 * Open cmd and type `ssh-keygen -t rsa -b 2048`
 * If it's your first time generating a key, you can use the default file to save the key
 * passphrase can be let empty
 * now the public and private key are (usually) saved at `C:\Users\<user_name>\.ssh\`
 
+
 ## SAVE RSA PUBLIC KEY AT SYNOPSYS SERVER
 
 * Enter the server (using your username and password given)
 * once there, go to `.ssh` and create the `authorized_keys` file, open it and paste the content of the `id_rsa.pub`created earlier
 
+
 ## INSTALL Xlaunch
 
 * Install VcXsrv Windows X Server (`https://sourceforge.net/projects/vcxsrv/`)
+
 
 ## VSCode SSH connection
 
@@ -132,7 +141,7 @@ hasta aqui llegamos.
       Host synopsys.elo.utfsm.cl
             HostName synopsys.elo.utfsm.cl
             Port 22
-            User usuario12
+            User usuarioXX
             IdentityFile C:\Users\<user_name>\.ssh\id_rsa
             ForwardAgent yes
             ForwardX11 yes
@@ -161,6 +170,7 @@ hasta aqui llegamos.
       style="width:50%;">
       </a>
 </div>
+
 
 # References
 
