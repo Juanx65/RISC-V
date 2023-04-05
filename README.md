@@ -35,7 +35,7 @@ Usando el comando `vlogan <archivo(s)> -full64 –sverilog +v2k` me tira un erro
 vcs -sverilog -parse_only <archivo(s)>
 ```
 
-El cual revisa la sintaxys y no genera el archivo de simulacion `sim` propio del comando `vc`.
+El cual revisa la sintaxis y no genera el archivo de simulación `\sim` propio del comando `vcs`.
 
 ## VCS: Logic simulation
  
@@ -86,8 +86,6 @@ Usamos el archivo `logic_synthesis.tcl` que se encarga de todo.
 
 falta:
 
-- estamos seguros de la libreria skywalk130 que use?
-- el reloj
 - area maxima
 - fanout
 - set_max_transition
@@ -107,19 +105,19 @@ Y como resultado despliega información en consola, así como datos respecto al 
 
 hasta aqui llegamos.
 
-# EXTRAS
+# EXTRAS - WINDOWS 10/11
 
 ## RSA KEY GENERATION
 
 * Open cmd and type `ssh-keygen -t rsa -b 2048`
-* If it's your first time generatin a key, you can use the default file to save the key
+* If it's your first time generating a key, you can use the default file to save the key
 * passphrase can be let empty
-* now the public and private key are (usually) at `C:\Users\<user_name>\.ssh\`
+* now the public and private key are (usually) saved at `C:\Users\<user_name>\.ssh\`
 
 ## SAVE RSA PUBLIC KEY AT SYNOPSYS SERVER
 
 * Enter the server (using your username and password given)
-* once there, go to `.ssh` and create the `authorized_keys` file, open it and paste the content of the `id_rsa.pub`created in early
+* once there, go to `.ssh` and create the `authorized_keys` file, open it and paste the content of the `id_rsa.pub`created earlier
 
 ## INSTALL Xlaunch
 
@@ -140,7 +138,7 @@ hasta aqui llegamos.
             ForwardX11 yes
             ForwardX11Trusted yes
             XAuthLocation "C:\Program Files\VcXsrv\xauth.exe"
-* In VSC `Settings`, be sure to have `Remote X11.SSH: Private Key` set as the `IdentityFile` from the previous step
+* In VSC `Settings`, be sure that `Remote X11.SSH: Private Key` is set as the `IdentityFile` from the previous step
 
 *  In VSC `Settings`, be sure to have `Remote X11.SSH: XAuth Permission Level` as `trusted` 
 
