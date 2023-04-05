@@ -46,7 +46,6 @@ compile -exact_map
 #write_sdc report/test.sdc
 
 ## Start GUI
-#setenv DISPLAY 127.0.0.1:10.0
 gui_start
 
 # Exit

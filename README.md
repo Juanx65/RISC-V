@@ -7,7 +7,7 @@ The Digital Design Flow is the following:
      <img
       src="img_readme/flujo.png"
       alt="flujo de diseño Synopsys"
-      style="width:85%;">
+      style="width:70%;">
       </a>
 </div>
 
@@ -159,7 +159,7 @@ hasta aqui llegamos.
      <img
       src="img_readme/ssh-comfig.png"
       alt="configuracion rsa key vsc settings"
-      style="width:85%;">
+      style="width:75%;">
       </a>
 </div>
 
@@ -170,7 +170,7 @@ hasta aqui llegamos.
      <img
       src="img_readme/x11_enabled.png"
       alt="enable x11"
-      style="width:50%;">
+      style="width:40%;">
       </a>
 </div>
 
