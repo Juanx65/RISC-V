@@ -110,10 +110,10 @@ hasta aqui llegamos.
 
 ## MobaXterm Connection
 
-# algun dia lo explico si es necesario para ser auto contenido...
+* algun dia lo explico si es necesario para ser auto contenido...
 
 
-## RSA KEY GENERATION - Needed for SSH Connection with VSC
+## RSA Key Generation - Needed for SSH Connection with VSC
 
 * Open cmd and type `ssh-keygen -t rsa -b 2048`
 * If it's your first time generating a key, you can use the default file to save the key
@@ -121,20 +121,23 @@ hasta aqui llegamos.
 * now the public and private key are (usually) saved at `C:\Users\<user_name>\.ssh\`
 
 
-## SAVE RSA PUBLIC KEY AT SYNOPSYS SERVER
+## Save RSA Public Key at Synopsys Server
 
-* Enter the server (using your username and password given)
-* once there, go to `.ssh` and create the `authorized_keys` file, open it and paste the content of the `id_rsa.pub`created earlier
+* Enter the server (using your username and password given) 
+* once there, go to the `.ssh` folder and create the `authorized_keys` file, open it and paste the content of the `id_rsa.pub` created earlier
 
 
-## INSTALL Xlaunch
+## Install and run Xlaunch
 
 * Install VcXsrv Windows X Server (`https://sourceforge.net/projects/vcxsrv/`)
+* run it, select `Multiple windows` with display number as `0`
+* next (default): only select the option `start no client`
+* next (default), next (default), Finish.
 
 
 ## VSCode SSH connection
 
-* Install `Remote -SSH`, `Remote X11` and `Remote X11 (SSH)` extension
+* Install `Remote -SSH`, `Remote X11` and `Remote X11 (SSH)` extension in VSC
 * Open command palette > Remote-SSH: Open SSH Configuration File.. > .../.ssh/config
 * Edit it as follows:
 
