@@ -107,3 +107,38 @@ Y como resultado despliega información en consola, así como datos respecto al 
 
 hasta aqui llegamos.
 
+# EXTRAS
+
+## RSA KEY GENERATION
+
+* Open cmd and type `ssh-keygen -t rsa -b 2048`
+* If it's your first time generatin a key, you can use the default file to save the key
+* passphrase can be let empty
+* now the public and private key are (usually) at `C:\Users\<user_name>\.ssh\`
+
+## SAVE RSA PUBLIC KEY AT SYNOPSYS SERVER
+
+* Enter the server (using your username and password given)
+* once there, go to `.ssh` and create the `authorized_keys` file, open it and paste the content of the `id_rsa.pub`created in early
+
+## INSTALL Xlaunch
+
+* Install VcXsrv Windows X Server (`https://sourceforge.net/projects/vcxsrv/`)
+
+## VSCode SSH connection
+
+* Install `Remote -SSH` and `Remote X11 (SSH)` extension
+* Open command palette > Remote-SSH: Open SSH Configuration File.. > .../.ssh/config
+* Edit it as follows:
+
+      Host synopsys.elo.utfsm.cl
+            HostName synopsys.elo.utfsm.cl
+            Port 22
+            User usuario12
+            IdentityFile C:\Users\<user_name>\.ssh\id_rsa
+            ForwardAgent yes
+            ForwardX11 yes
+            ForwardX11Trusted yes
+            XAuthLocation C:\Program Files\VcXsrv\xauth.exe
+* In VSC `Settings`, be sure to have `Remote X11.SSH: Private Key` set as the `IdentityFile` from the previous step
+
