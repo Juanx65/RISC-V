@@ -163,3 +163,8 @@ hasta aqui llegamos.
       style="width:50%;">
       </a>
 </div>
+
+# References
+
+* VSC X11 SSG connection: `https://github.com/microsoft/vscode-remote-release/issues/4600#issuecomment-791332086`
+* RSA key generation and linking to VSC: `https://www.youtube.com/watch?v=PDVnUErS_us`
