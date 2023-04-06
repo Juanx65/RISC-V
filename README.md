@@ -130,10 +130,7 @@ hasta aqui llegamos.
 ## Install and run Xlaunch
 
 * Install VcXsrv Windows X Server (`https://sourceforge.net/projects/vcxsrv/`)
-* run it, select `Multiple windows` with display number as `0`
-* next (default): only select the option `start no client`
-* next (default), next (default), Finish.
-
+* run it with default options
 
 ## VSCode SSH connection
 

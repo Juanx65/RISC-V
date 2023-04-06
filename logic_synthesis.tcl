@@ -3,7 +3,7 @@ set_app_var target_library "sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__ff_100C_1v9
 set_app_var link_library "* $target_library"
 
 ## RTL Reading and Link
-analyze -format sverilog {test_code/sumador_ff.v}
+analyze -format sverilog {test_code/adder_tree.v}
 elaborate adder_tree_fp
 
 link
