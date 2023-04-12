@@ -1,4 +1,5 @@
-module datapath(input logic clk, reset,
+module datapath(
+    input logic clk, reset,
     input logic [1:0] ResultSrc,
     input logic PCSrc, ALUSrc,
     input logic RegWrite,

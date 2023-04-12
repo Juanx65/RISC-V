@@ -1,4 +1,5 @@
-module maindec(input logic [6:0] op,
+module maindec(
+    input logic [6:0] op,
     output logic [1:0] ResultSrc,
     output logic MemWrite,
     output logic Branch, ALUSrc,
