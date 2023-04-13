@@ -12,10 +12,7 @@ always_comb begin
         3'b001: ALUResult = SrcA - SrcB; // SUB
         3'b010: ALUResult = SrcA & SrcB; // AND
         3'b011: ALUResult = SrcA | SrcB; // OR
-        3'b100: ALUResult = SrcA ^ SrcB; // XOR
-        3'b101: ALUResult = SrcA << SrcB[4:0]; // SLL (Shift Left Logical)
-        3'b110: ALUResult = SrcA >> SrcB[4:0]; // SRL (Shift Right Logical)
-        3'b111: ALUResult = $signed(SrcA) >>> SrcB[4:0]; // SRA (Shift Right Arithmetic)
+        3'b101: ALUResult = SrcA < SrcB; // SLT (Set Less Than)
         default: ALUResult = 32'b0;
     endcase
 
