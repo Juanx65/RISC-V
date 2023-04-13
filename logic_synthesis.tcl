@@ -3,8 +3,8 @@ set_app_var target_library "sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__ff_100C_1v9
 set_app_var link_library "* $target_library"
 
 ## RTL Reading and Link
-analyze -format sverilog {test_code/adder_tree.v}
-elaborate adder_tree_fp
+analyze -format sverilog {Uniciclo/top.sv Uniciclo/adder.sv Uniciclo/alu.sv Uniciclo/aludec.sv Uniciclo/controller.sv Uniciclo/datapath.sv Uniciclo/dmem.sv Uniciclo/extend.sv Uniciclo/flopr.sv Uniciclo/flopenr.sv Uniciclo/imem.sv Uniciclo/maindec.sv Uniciclo/mux2.sv Uniciclo/mux3.sv Uniciclo/regfile.sv Uniciclo/riscvsingle.sv}
+elaborate top
 
 link
 
@@ -42,11 +42,11 @@ compile -exact_map
 ## Save Design
 #write_file -format ddc -hierarchy -out report/test1.ddc
 
-#write_file -format verilog -hierarchy -out report/test11.v
-#write_sdc report/test.sdc
+#write_file -format verilog -hierarchy -out report/test1.v
+#write_sdc report/test1.sdc
 
 ## Start GUI
 gui_start
 
 # Exit
-# exit
+#exit
