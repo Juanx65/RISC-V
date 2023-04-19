@@ -1,5 +1,5 @@
 ## Librarys
-set_app_var target_library "sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__ff_100C_1v95.db sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__ss_100C_1v40.db"
+set_app_var target_library "sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__ff_100C_1v95.db"
 set_app_var link_library "* $target_library"
 
 ## RTL Reading and Link
@@ -39,8 +39,8 @@ if {[file exists $directorio]} {
 # analyze_datapath_extraction > report/analyze_datapath_extraction.rpt                                                       
 
 ## Compile/Synthesis
-#compile_ultra -no_autoungroup
-compile -exact_map
+compile_ultra -no_autoungroup
+#compile -exact_map
 
 ## Post-compile Reports
 # analyze_datapath > report/analyze_datapath.rpt
@@ -51,10 +51,10 @@ compile -exact_map
 # report_power > report/report_power.rpt
 
 ## Save Design
-write_file -format ddc -hierarchy -out report/Uniciclo.ddc
+write_file -format ddc -hierarchy -out report/alu.ddc
 
-write_file -format verilog -hierarchy -out report/Uniciclo.v
-write_sdc report/Uniciclo.sdc
+write_file -format verilog -hierarchy -out report/alu.v
+write_sdc report/alu.sdc
 
 ## Start GUI
 #gui_start

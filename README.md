@@ -103,7 +103,33 @@ Y como resultado despliega información en consola, así como datos respecto al 
 
 ## Formal Verification
 
-hasta aqui llegamos.
+Text
+
+## Pre-Layour STA ( Prime Time )
+
+Text
+
+## Floorplanning, placement & Routing
+
+### Floorplan:
+
+correr en la consola el siguiente comando (sigue en construccion): 
+
+```
+icc2_shell -gui -f icc2_test.tcl
+```
+
+## Physical Verification
+
+Text
+
+## Post-Layout STA ( Prime Time )
+
+Text
+
+## Finished Design
+
+Text
 
 # EXTRAS - WINDOWS 10/11 SYNOPSYS SERVER CONNECTION
 
