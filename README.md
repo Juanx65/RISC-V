@@ -23,9 +23,11 @@ No se plantea el uso de FPGAs como un objetivo de los proyectos que desarrollara
 
 ## RTL: Cell description coding
 
-Por ahora hare las pruebas de diseño en el codigo de sumador presentado en la carpeta `test_code` donde se describe un sumador simple.
+* Pruebas para una ALU simple, un sumador y otras descripciones se encuentran en la carpeta `test_code`, con el objetivo de probar el flujo de disennio en forma preeliminar.
 
-Se espera más adelante tener una carpeta con el codigo del procesador RV32I.
+* La descripcion de un procesador uniciclo para pruebas del flujo de disennio se encuentran en la carpeta `Uniciclo`.
+
+* Se espera mas adelante tener una carpeta con la descripcion del procesador RV32I.
 
 ## Consola: Syntax Check
 
@@ -84,22 +86,24 @@ donde las opciones disponibles son:
 
 Usamos el archivo `logic_synthesis.tcl` que se encarga de todo.
 
-falta:
+* falta especificar:
 
-- area maxima
-- fanout
-- set_max_transition
+      - area maxima
+      - fanout
+      - set_max_transition
 
-por ahora se usaron datos de prueba.
+      por ahora se usaron datos de prueba.
 
-El archivo `logic_synthesis.tcl` se corre con el siguiente comando:
+* El archivo `logic_synthesis.tcl` se corre con el siguiente comando:
+      
+      ``` 
+      dc_shell -f logic_synthesis.tcl
+      ``` 
 
-``` 
-dc_shell -f logic_synthesis.tcl
-``` 
+      Y como resultado despliega información en consola, así como datos respecto al timing, area, power, etc en la carpeta `report`.
 
-Y como resultado despliega información en consola, así como datos respecto al timing, area, power, etc en la carpeta `report`.
-
+* Pendientes
+      - verificar los resultados de la sintesis logica para el Uniciclo u otra descripcion simple, en especial WNS reportado.
 
 ## Formal Verification
 
@@ -113,7 +117,7 @@ Text
 
 ### Floorplan:
 
-correr en la consola el siguiente comando (sigue en construccion): 
+Correr en la consola el siguiente comando (sigue en construccion): 
 
 ```
 icc2_shell -gui -f icc2_test.tcl
