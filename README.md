@@ -86,14 +86,13 @@ donde las opciones disponibles son:
 
 Usamos el archivo `logic_synthesis.tcl` que se encarga de todo.
 
-* falta especificar:
+Falta especificar:
 - area maxima
 - fanout
 - set_max_transition
-
 por ahora se usaron datos de prueba.
 
-* El archivo `logic_synthesis.tcl` se corre con el siguiente comando:
+El archivo `logic_synthesis.tcl` se corre con el siguiente comando:
 
 ``` 
 dc_shell -f logic_synthesis.tcl
@@ -101,8 +100,8 @@ dc_shell -f logic_synthesis.tcl
 
 Y como resultado despliega información en consola, así como datos respecto al timing, area, power, etc en la carpeta `report`.
 
-* Pendientes
-      - verificar los resultados de la sintesis logica para el Uniciclo u otra descripcion simple, en especial WNS reportado.
+Pendientes
+- verificar los resultados de la sintesis logica para el Uniciclo u otra descripcion simple, en especial WNS reportado.
 
 ## Formal Verification
 
