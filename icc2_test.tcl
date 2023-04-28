@@ -33,12 +33,24 @@ create_io_ring -name outer_ring -corner_height 0.5
 create_net -power VDD2
 create_net -ground VSS2
 create_power_domain PD1
-create_power_switch SW1 -input_supply_port {vin VDD2} -domain {PD1}
+#create_power_switch SW1 -input_supply_port {vin VDD2} -domain {PD1}
 connect_pg_net -automatic
 
 set_power_io_constraints -reference_cell {VDD2 VSS2}
 
 place_io
+
+#ring prometedor
+
+connect_pg_net -automatic -all_blocks
+
+create_pg_ring_pattern ring_pattern -horizontal_layer M1 \
+   -horizontal_width {1.5} -horizontal_spacing {0.5} \
+   -vertical_layer M2 -vertical_width {1.5} -vertical_spacing {0.5}
+set_pg_strategy core_ring \
+   -pattern {{name: ring_pattern} \
+   {nets: {VDD VSS}} {offset: {0.5 0.5}}} -core
+compile_pg -strategies core_ring
 
 ## or guides: ver man pages de icc2
 #create_io_guide -name "io_guide1" -line {{100 100} 100} -side left -pad_cells { pad1 pad2 }
