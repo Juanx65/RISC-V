@@ -19,13 +19,16 @@ read_sdc "report/alu.sdc"
 #------------------------------------------
 #  Placement
 # -----------------------------------------
-initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -core_side_ratio {1.5 1.0} -core_offset {0.5}  -flip_first_row true  -coincident_boundary true
+initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -core_side_ratio {1.5 1.0} -core_offset {5}  -flip_first_row true  -coincident_boundary true
 
 #------------------------------------------
 #  Power Rings
 # -----------------------------------------
+create_net -power VDD
+create_net -ground VSS
 
-connect_pg_net -automatic -all_blocks
+#connect_pg_net -net VDD [get_pins -physical_context *VDD]
+#connect_pg_net -net VSS [get_pins -physical_context *VSS]
 
 create_pg_ring_pattern ring_pattern -horizontal_layer met1 \
    -horizontal_width {1.5} -horizontal_spacing {0.5} \
@@ -33,15 +36,35 @@ create_pg_ring_pattern ring_pattern -horizontal_layer met1 \
 set_pg_strategy core_ring \
    -pattern {{name: ring_pattern} \
    {nets: {VDD VSS}} {offset: {0.5 0.5}}} -core
+
+connect_pg_net -automatic -all_blocks
 compile_pg -strategies core_ring
 
-## Falta mesh grid aca https://github.com/SkillSurf/systemverilog/blob/91b4842a7377734b780b910e659ddff0a21ee7d0/asic_flow/scripts/icc2/icc2.tcl
+#-----------------------------------------
+# MESH
+#-----------------------------------------
+#create_pg_mesh_pattern mesh_pattern -layers { {{horizontal_layer: met1} {width: 0.75} {pitch: 15} {spacing: interleaving}}  {{vertical_layer: met2} {width: 0.84} {pitch: 33.6} {spacing: interleaving}} }
+#set_pg_strategy mesh_strategy  -polygon {{1.000 4.880} {16.144 11.990}} -pattern {{pattern: mesh_pattern}{nets: {VDD VSS}}} -blockage {macros: all}
+#create_pg_std_cell_conn_pattern std_cell_pattern
+#set_pg_strategy std_cell_strategy  -polygon {{1.000 4.880} {16.144 11.990}} -pattern {{pattern: std_cell_pattern}{nets: {VDD VSS}}}
+#compile_pg -ignore_via_drc
 
+create_pg_mesh_pattern mesh_pattern \
+   -layers {{{vertical_layer: met1} {width: 0.6}\
+             {pitch: 20} {offset: 20}}\
+            {{horizontal_layer: met2} {width: 0.6}\
+             {pitch: 20} {offset: 20}}}
+
+set_pg_strategy M5M6_mesh \
+   -pattern {{name: mesh_pattern} \
+             {nets: VDD VSS VDD VSS}} -core
+
+compile_pg -strategies M5M6_mesh
+        
 #------------------------------------------
 #  Pin I/O - MODIFY the pins as required
 # -----------------------------------------
 place_pins -self -ports {VDD VSS SrcA SrcB ALUControl ALUResult Zero}
-
 
 #------------------------------------------
 #  Placement
@@ -51,7 +74,6 @@ create_placement -floorplan -timing_driven
 # -----------------------------------------
 #  Route
 # -----------------------------------------
-
 #clock_opt
 route_auto -max_detail_route_iterations 5
 #save_block $library_name:$top_module
