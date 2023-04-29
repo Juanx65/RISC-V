@@ -50,21 +50,22 @@ compile_pg -strategies core_ring
 #compile_pg -ignore_via_drc
 
 create_pg_mesh_pattern mesh_pattern \
-   -layers {{{vertical_layer: met1} {width: 0.6}\
+   -layers {{{vertical_layer: met2} {width: 0.6}\
              {pitch: 20} {offset: 20}}\
-            {{horizontal_layer: met2} {width: 0.6}\
+            {{horizontal_layer: met1} {width: 0.6}\
              {pitch: 20} {offset: 20}}}
 
 set_pg_strategy M5M6_mesh \
    -pattern {{name: mesh_pattern} \
-             {nets: VDD VSS VDD VSS}} -core
+             {nets: VDD VSS}} -core
 
 compile_pg -strategies M5M6_mesh
         
 #------------------------------------------
 #  Pin I/O - MODIFY the pins as required
 # -----------------------------------------
-place_pins -self -ports {VDD VSS SrcA SrcB ALUControl ALUResult Zero}
+#place_pins -self -ports {VDD VSS SrcA SrcB ALUControl ALUResult Zero}
+place_pins -self
 
 #------------------------------------------
 #  Placement
