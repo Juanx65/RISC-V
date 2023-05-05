@@ -37,40 +37,47 @@ set_pg_strategy core_ring \
    -pattern {{name: ring_pattern} \
    {nets: {VDD VSS}} {offset: {0.5 0.5}}} -core
 
-connect_pg_net -automatic -all_blocks
+#connect_pg_net -automatic -all_blocks
+connect_pg_net -automatic
 compile_pg -strategies core_ring
 
 #-----------------------------------------
 # MESH
 #-----------------------------------------
+create_pg_std_cell_conn_pattern rail_pattern -layer met1 
+set_pg_strategy M1_rails -core -pattern {{name : rail_pattern}{nets: VDD VSS}}
+compile_pg -strategies M1_rails
+
 #create_pg_mesh_pattern mesh_pattern -layers { {{horizontal_layer: met1} {width: 0.75} {pitch: 15} {spacing: interleaving}}  {{vertical_layer: met2} {width: 0.84} {pitch: 33.6} {spacing: interleaving}} }
 #set_pg_strategy mesh_strategy  -polygon {{1.000 4.880} {16.144 11.990}} -pattern {{pattern: mesh_pattern}{nets: {VDD VSS}}} -blockage {macros: all}
 #create_pg_std_cell_conn_pattern std_cell_pattern
 #set_pg_strategy std_cell_strategy  -polygon {{1.000 4.880} {16.144 11.990}} -pattern {{pattern: std_cell_pattern}{nets: {VDD VSS}}}
 #compile_pg -ignore_via_drc
 
-create_pg_mesh_pattern mesh_pattern \
+#create_pg_mesh_pattern mesh_pattern \
    -layers {{{vertical_layer: met2} {width: 0.6}\
              {pitch: 20} {offset: 20}}\
             {{horizontal_layer: met1} {width: 0.6}\
              {pitch: 20} {offset: 20}}}
 
-set_pg_strategy M5M6_mesh \
+#set_pg_strategy M5M6_mesh \
    -pattern {{name: mesh_pattern} \
              {nets: VDD VSS}} -core
 
-compile_pg -strategies M5M6_mesh
+#compile_pg -strategies M5M6_mesh
         
 #------------------------------------------
 #  Pin I/O - MODIFY the pins as required
 # -----------------------------------------
-#place_pins -self -ports {VDD VSS SrcA SrcB ALUControl ALUResult Zero}
-place_pins -self
+place_pins -self -ports {VDD VSS SrcA SrcB ALUControl ALUResult Zero}
+#place_pins -self
 
 #------------------------------------------
 #  Placement
 # -----------------------------------------
 create_placement -floorplan -timing_driven
+## legalize_placement necesario para que las celdas no se sobrepongan unas a otras
+legalize_placement 
 
 # -----------------------------------------
 #  Route
