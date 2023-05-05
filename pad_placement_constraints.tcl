@@ -1,0 +1,21 @@
+set_attribute -object [get_cells SrcA0] -name physical_status -value placed
+set_attribute -object [get_cells SrcA1] -name physical_status -value placed
+set_attribute -object [get_cells SrcA2] -name physical_status -value placed
+set_attribute -object [get_cells SrcA3] -name physical_status -value placed
+set_attribute -object [get_cells SrcB0] -name physical_status -value placed
+set_attribute -object [get_cells SrcB1] -name physical_status -value placed
+set_attribute -object [get_cells SrcB2] -name physical_status -value placed
+set_attribute -object [get_cells SrcB3] -name physical_status -value placed
+set_attribute -object [get_cells ALUControl0] -name physical_status -value placed
+set_attribute -object [get_cells ALUControl1] -name physical_status -value placed
+set_attribute -object [get_cells ALUControl2] -name physical_status -value placed
+set_attribute -object [get_cells ALUResult0] -name physical_status -value placed
+set_attribute -object [get_cells ALUResult1] -name physical_status -value placed
+set_attribute -object [get_cells ALUResult2] -name physical_status -value placed
+set_attribute -object [get_cells ALUResult3] -name physical_status -value placed
+set_attribute -object [get_cells Zero] -name physical_status -value placed
+
+create_io_guide -side right -pad_cells {SrcA0 SrcA1 SrcA2 SrcA3}
+create_io_guide -side left -pad_cells {SrcB0 SrcB1 SrcB2 SrcB3} 
+create_io_guide -side top -pad_cells {ALUControl0 ALUControl1 ALUControl2 Zero} 
+create_io_guide -side bottom -pad_cells {ALUResult0 ALUResult1 ALUResult2 ALUResult3} 

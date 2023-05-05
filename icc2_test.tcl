@@ -1,3 +1,9 @@
+##########################################################################################
+# 				PLACE_IO
+##########################################################################################
+set TCL_PAD_CONSTRAINTS_FILE "pad_placement_constraints.tcl"
+
+
 ## Call out libraries
 set_app_var target_library "sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__ff_100C_1v95.db"
 set_app_var link_library "* $target_library"
@@ -24,20 +30,31 @@ initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -cor
 #------------------------------------------
 #  Power Rings
 # -----------------------------------------
-create_net -power VDD
-create_net -ground VSS
+create_net -power D_VDD
+create_net -ground D_VSS
 
 #create_pg_ring_pattern ring_pattern -horizontal_layer met1 -horizontal_width {0.48} -horizontal_spacing {0.24} -vertical_layer met2 -vertical_width {0.48} -vertical_spacing {0.24}
 #set_pg_strategy core_ring -pattern {{name: ring_pattern} {nets: {VDD VSS}} {offset: {2 2}}} -core
 
-compile_pg -strategies core_ring
+#compile_pg -strategies core_ring
 connect_pg_net -automatic -all_blocks
 
+####################################
+### Place IO
+######################################
+#if {[file exists [which $TCL_PAD_CONSTRAINTS_FILE]]} {
+#   puts "RM-info : Loading TCL_PAD_CONSTRAINTS_FILE file ($TCL_PAD_CONSTRAINTS_FILE)"3
+#   source -echo $TCL_PAD_CONSTRAINTS_FILE
+#
+#   puts "RM-info : running place_io"
+#   place_io
+#}
         
 #------------------------------------------
 #  Pin I/O - MODIFY the pins as required
 # -----------------------------------------
-place_pins -self -ports {VDD VSS SrcA SrcB ALUControl ALUResult Zero}
+#set_block_pin_constraints -self
+place_pins -self -ports {D_VDD D_VSS SrcA SrcB ALUControl ALUResult Zero}
 #place_pins -self
 
 #------------------------------------------
@@ -50,7 +67,7 @@ legalize_placement
 # MESH
 #-----------------------------------------
 create_pg_std_cell_conn_pattern rail_pattern -layer met1 
-set_pg_strategy M1_rails -core -pattern {{name : rail_pattern}{nets: VDD VSS}{offset: {2 2}}}
+set_pg_strategy M1_rails -core -pattern {{name : rail_pattern}{nets: D_VDD D_VSS}}
 compile_pg -strategies M1_rails
 
 # -----------------------------------------
