@@ -105,7 +105,41 @@ Pendientes
 
 ## Formal Verification
 
-Text
+Para la verificación formal usamos la herramienta formality.
+Es importante revisar si se tiene acceso a esta, al igual que con la herramienta de prime time, para esto asegurarse de que en `.bashrc` se encuentren las siguientes lineas:
+
+```
+PATH=/home/SynopsysSoftware/fm/R-2020.09-SP5/bin:$PATH     
+PATH=/home/SynopsysSoftware/prime/R-2020.09-SP5-3/bin:$PATH
+```
+
+Una vez contamos con acceso a la herramienta, podemos iniciar la gui en consola con el siguiente comando:
+
+```
+formality
+```
+
+En la gui seguimos los siguientes pasos:
+
+* Cargar el RTL en la pestaña `1. Ref`:
+![Vivado Project IP.](img_readme/ref.gif)
+
+* Cargar la Netlist resultante de la sintesis logica en los pasos anteriores en `2. Impl.`:
+![Vivado Project IP.](img_readme/impl.gif)
+
+* Match y Verificacion:
+![Vivado Project IP.](img_readme/verify.gif)
+
+
+ --- 
+ obs: por ahora hay unos WARNINGS respecto al codigo de imem y dmem del uniciclo, por lo que el tutorial esta hecho en base a una alu simple.
+ --- 
+Status:   Elaborating design imem   ...  
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: RAM Block: /imem File: /home/usuario12/RISC-V/Uniciclo/imem.sv Line: 9)  (FMR_ELAB-147)
+Status:   Elaborating design dmem   ...  
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: RAM Block: /dmem File: /home/usuario12/RISC-V/Uniciclo/dmem.sv Line: 8)  (FMR_ELAB-147)
+
+
 
 ## Pre-Layour STA ( Prime Time )
 

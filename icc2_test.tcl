@@ -5,7 +5,7 @@ set TCL_PAD_CONSTRAINTS_FILE "pad_placement_constraints.tcl"
 
 
 ## Call out libraries
-set_app_var target_library "sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__ff_100C_1v95.db"
+set_app_var target_library "sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__tt_100C_1v80.db"
 set_app_var link_library "* $target_library"
 ## change design here
 #sh rm -r /home/usuario12/RISC-V/uniciclo_LIB
@@ -19,8 +19,8 @@ read_parasitic_tech  -tlup "sky130_fd_sc_hd/skywater130.nominal.tluplus" -layerm
 #------------------------------------------
 #  Design
 # -----------------------------------------
-read_verilog "report/alu.v"
-read_sdc "report/alu.sdc"
+read_verilog "report/uniciclo.v"
+read_sdc "report/uniciclo.sdc"
 
 #------------------------------------------
 #  Placement
@@ -54,8 +54,8 @@ connect_pg_net -automatic -all_blocks
 #  Pin I/O - MODIFY the pins as required
 # -----------------------------------------
 #set_block_pin_constraints -self
-place_pins -self -ports {D_VDD D_VSS SrcA SrcB ALUControl ALUResult Zero}
-#place_pins -self
+#place_pins -self -ports {D_VDD D_VSS SrcA SrcB ALUControl ALUResult Zero}
+place_pins -self
 
 #------------------------------------------
 #  Placement
