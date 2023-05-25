@@ -155,6 +155,14 @@ Correr en la consola el siguiente comando (sigue en construccion):
 icc2_shell -gui -f icc2_test.tcl
 ```
 
+---
+
+obs: Por el momento tenemos los siguientes problemas:
+
+* icc2: no se pueden hacer operaciones de optmizacion como place_opt, clock_opt ni route_opt.
+* icc2: no existen los pines de salida de vcc ni vdd, no sabemos porque.
+* formality: No es posible setear el top del codigo de uniciclo, error de index may take values oustide array bound en dmem e imem
+
 ## Physical Verification
 
 Text
@@ -238,3 +246,7 @@ Text
 
 * VSC X11 SSG connection: `https://github.com/microsoft/vscode-remote-release/issues/4600#issuecomment-791332086`
 * RSA key generation and linking to VSC: `https://www.youtube.com/watch?v=PDVnUErS_us`
+
+* Formality tutorial: `https://www.youtube.com/watch?v=CFRqPnqifx0`
+
+* ICC tutorial: `https://www.youtube.com/watch?v=BQxG3jzcifg`

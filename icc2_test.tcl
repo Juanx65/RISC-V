@@ -2,6 +2,8 @@
 # 				PLACE_IO
 ##########################################################################################
 set TCL_PAD_CONSTRAINTS_FILE "pad_placement_constraints.tcl"
+set clock_name clk
+set clock_period 10
 
 
 ## Call out libraries
@@ -19,13 +21,25 @@ read_parasitic_tech  -tlup "sky130_fd_sc_hd/skywater130.nominal.tluplus" -layerm
 #------------------------------------------
 #  Design
 # -----------------------------------------
-read_verilog "report/uniciclo.v"
-read_sdc "report/uniciclo.sdc"
+read_verilog "report/sumador_ff.v"
+read_sdc "report/sumador_ff.sdc"
 
 #------------------------------------------
-#  Placement
+# Clock
+#------------------------------------------
+create_clock -period ${clock_period} -name clk [get_ports $clock_name]
+
+### Timing Model
+set_timing_derate -early 0.93 -cell_delay -net_delay
+set clock uncertainty
+set_max_transition 0.15 [get_clock *] -clock_path
+set_max_transition 0.25 [get_clock *] -data_path
+set_max_capacitance 150 [current_design]
+
+#------------------------------------------
+#  Floorplan
 # -----------------------------------------
-initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -core_side_ratio {1.5 1.0} -core_offset {1}  -flip_first_row true  -coincident_boundary true
+initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -core_side_ratio {1.5 1.0} -core_offset {1 2.6}  -flip_first_row true  -coincident_boundary true
 
 #------------------------------------------
 #  Power Rings
@@ -33,23 +47,11 @@ initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -cor
 create_net -power D_VDD
 create_net -ground D_VSS
 
-#create_pg_ring_pattern ring_pattern -horizontal_layer met1 -horizontal_width {0.48} -horizontal_spacing {0.24} -vertical_layer met2 -vertical_width {0.48} -vertical_spacing {0.24}
-#set_pg_strategy core_ring -pattern {{name: ring_pattern} {nets: {VDD VSS}} {offset: {2 2}}} -core
-
-#compile_pg -strategies core_ring
-connect_pg_net -automatic -all_blocks
-
-####################################
-### Place IO
-######################################
-#if {[file exists [which $TCL_PAD_CONSTRAINTS_FILE]]} {
-#   puts "RM-info : Loading TCL_PAD_CONSTRAINTS_FILE file ($TCL_PAD_CONSTRAINTS_FILE)"3
-#   source -echo $TCL_PAD_CONSTRAINTS_FILE
-#
-#   puts "RM-info : running place_io"
-#   place_io
-#}
+create_pg_ring_pattern ring_pattern -horizontal_layer met1 -horizontal_width {0.48} -horizontal_spacing {0.24} -vertical_layer met2 -vertical_width {0.48} -vertical_spacing {0.24}
+set_pg_strategy core_ring -pattern {{name: ring_pattern} {nets: {D_VDD D_VSS}} {offset: {-1 0.6}}} -core
+compile_pg -strategies core_ring
         
+
 #------------------------------------------
 #  Pin I/O - MODIFY the pins as required
 # -----------------------------------------
@@ -63,6 +65,7 @@ place_pins -self
 create_placement -floorplan -timing_driven
 legalize_placement 
 
+connect_pg_net -automatic -all_blocks
 #-----------------------------------------
 # MESH
 #-----------------------------------------
