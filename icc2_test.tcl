@@ -21,8 +21,8 @@ read_parasitic_tech  -tlup "sky130_fd_sc_hd/skywater130.nominal.tluplus" -layerm
 #------------------------------------------
 #  Design
 # -----------------------------------------
-read_verilog "report/sumador_ff.v"
-read_sdc "report/sumador_ff.sdc"
+read_verilog "report/uniciclo.v"
+read_sdc "report/uniciclo.sdc"
 
 #------------------------------------------
 # Clock

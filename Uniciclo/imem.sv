@@ -5,5 +5,5 @@ module imem(
 logic [31:0] RAM[63:0];
 initial
     $readmemh("Uniciclo/riscvtest.txt",RAM);
-assign rd = RAM[a[31:2]]; // word aligned
+assign rd = RAM[a[7:2]]; // word aligned
 endmodule
