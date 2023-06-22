@@ -1,4 +1,26 @@
-# Implementation of a RISC-V proccessor using the Synopsys Digital Design Flow
+
+# Implementation of a RISC-V processor using the Synopsys Digital Design Flow
+
+## Table of Contents
+
+1. [Specification](#specification)
+2. [RTL: Cell description coding](#rtl-cell-description-coding)
+3. [Console: Syntax Check](#console-syntax-check)
+4. [VCS: Logic simulation](#vcs-logic-simulation)
+5. [Logic Synthesis](#logic-synthesis)
+6. [Formal Verification](#formal-verification)
+7. [Pre-Layour STA (Prime Time)](#pre-layour-sta-prime-time)
+8. [Floorplanning, placement & Routing](#floorplanning-placement-routing)
+9. [Physical Verification](#physical-verification)
+10. [Post-Layout STA (Prime Time)](#post-layout-sta-prime-time)
+11. [Finished Design](#finished-design)
+12. [Extras - Windows 10/11 Synopsys Server Connection](#extras---windows-1011-synopsys-server-connection)
+    - [MobaXterm Connection](#mobaxterm-connection)
+    - [RSA Key Generation - Needed for SSH Connection with VSC](#rsa-key-generation---needed-for-ssh-connection-with-vsc)
+    - [Save RSA Public Key at Synopsys Server](#save-rsa-public-key-at-synopsys-server)
+    - [Install and run Xlaunch](#install-and-run-xlaunch)
+    - [VSCode SSH connection](#vscode-ssh-connection)
+13. [References](#references)
 
 The Digital Design Flow is the following:
 
@@ -14,6 +36,10 @@ The Digital Design Flow is the following:
 
 ## Specification
 
+Design of a RISC-V processor. Implementation of an RV32I processor with a five-stage pipeline.
+
+--- 
+
 Diseño de un procesador RISC-V. Implementación de procesador RV32I con pipeline de cinco etapas:
 
 Implementar un procesador RISC-V sencillo. En este caso el desafío no estaría tanto en el diseño en si, ya que hay varios que han implementado y verificado sus propias versiones de procesador en HDL. La idea es que teniendo un código base medianamente probado, el esfuerzo se enfoque en documentar el flujo de diseño en las capas más bajas de la implementación. El ya tener un RISC-V como base abre las puertas para posteriores proyectos que integren diversos periféricos. 
@@ -23,32 +49,32 @@ No se plantea el uso de FPGAs como un objetivo de los proyectos que desarrollara
 
 ## RTL: Cell description coding
 
-* Pruebas para una ALU simple, un sumador y otras descripciones se encuentran en la carpeta `test_code`, con el objetivo de probar el flujo de disennio en forma preeliminar.
+* Tests for a simple ALU, an adder, and other descriptions can be found in the test_code folder, with the aim of testing the design flow preliminarily.
 
-* La descripcion de un procesador uniciclo para pruebas del flujo de disennio se encuentran en la carpeta `Uniciclo`.
+* The description of a unicycle processor for testing the design flow can be found in the `Unicycle` folder.
 
-* Se espera mas adelante tener una carpeta con la descripcion del procesador RV32I.
+* It is expected later to have a folder with the description of the RV32I processor.
 
-## Consola: Syntax Check
+## Console: Syntax Check
 
-Usando el comando `vlogan <archivo(s)> -full64 –sverilog +v2k` me tira un error de sintaxis en la parte de simulación usando SystemVerilog, por lo que opte por este comando:
+The command `vlogan <file(s)> -full64 –sverilog +v2k` gives a syntax error in the simulation part using SystemVerilog, so we opted for the following command:
 
 ``` 
 vcs -sverilog -parse_only <archivo(s)>
 ```
 
-El cual revisa la sintaxis y no genera el archivo de simulación `\sim` propio del comando `vcs`.
+Which checks the syntax and does not generate the simulation file `\sim` typical of the `vcs` command.
 
 ## VCS: Logic simulation
  
-Para correr una simulación corremos en consola:
+To start a simulation we run in the console the following command:
 
 ```
 vcs -sverilog -debug -cpp -gcc -R -gui <achivo(s)>
 ```
-Donde `-R` corre la simulación (que debe añadirse en los archivos como un testbench) inmediatamente despues de la compilación.
+Where `-R` runs the simulation (which should be added to the files as a testbench) immediately after compilation.
 
-otras opciones para el comando VCS son:
+Other options for the VCS command are:
 
 |Opciones de vcs   |                                            |
 |------------------|--------------------------------------------|
@@ -63,13 +89,13 @@ otras opciones para el comando VCS son:
 | -R               | Run simulation immediately after compile   |
 | -cm <options>    | Enable coverage options                    |
 
-Si deseas correr la simulación sin volver a correr vcs, puedes hacerlo usando el siguiente comando:
+If you want to run the simulation without running vcs again, you can do it using the following command:
 
 ``` 
 ./simv <options> 
 ```
 
-donde las opciones disponibles son:
+Where you may use the following options:
 
 
 |Opciones de ./simv|                                            |
@@ -84,42 +110,42 @@ donde las opciones disponibles son:
 
 ## Logic Synthesis
 
-Usamos el archivo `logic_synthesis.tcl` que se encarga de todo.
+Use the `logic_synthesis.tcl` file which takes care of everything.
 
-Falta especificar:
-- area maxima
+To be specified:
+- maximum area
 - fanout
 - set_max_transition
-por ahora se usaron datos de prueba.
+for now, test data was used.
 
-El archivo `logic_synthesis.tcl` se corre con el siguiente comando:
+The `logic_synthesis.tcl` file is run with the following command:
 
 ``` 
 dc_shell -f logic_synthesis.tcl
 ``` 
 
-Y como resultado despliega información en consola, así como datos respecto al timing, area, power, etc en la carpeta `report`.
+And as a result, it displays information in the console, as well as data regarding timing, area, power, etc in the `report` folder.
 
-Pendientes
-- verificar los resultados de la sintesis logica para el Uniciclo u otra descripcion simple, en especial WNS reportado.
+Pending tasks
+- Verify the results of the logic synthesis for the Unicycle or another simple description, especially the reported WNS.
 
 ## Formal Verification
 
-Para la verificación formal usamos la herramienta formality.
-Es importante revisar si se tiene acceso a esta, al igual que con la herramienta de prime time, para esto asegurarse de que en `.bashrc` se encuentren las siguientes lineas:
+For formal verification we use the formality tool.
+It is important to check if you have access to this, as with the prime time tool, for this make sure that the following lines are found in `.bashrc` at the synopsys server:
 
 ```
 PATH=/home/SynopsysSoftware/fm/R-2020.09-SP5/bin:$PATH     
 PATH=/home/SynopsysSoftware/prime/R-2020.09-SP5-3/bin:$PATH
 ```
 
-Una vez contamos con acceso a la herramienta, podemos iniciar la gui en consola con el siguiente comando:
+Once we have access to the tool, we can start the gui in the console with the following command:
 
 ```
 formality
 ```
 
-En la gui seguimos los siguientes pasos:
+In the gui we follow the following steps:
 
 * Cargar el RTL en la pestaña `1. Ref`:
 ![Vivado Project IP.](img_readme/ref.gif)
@@ -132,7 +158,9 @@ En la gui seguimos los siguientes pasos:
 
 
  --- 
- obs: por ahora hay unos WARNINGS respecto al codigo de imem y dmem del uniciclo, por lo que el tutorial esta hecho en base a una alu simple.
+ obs: 
+ - For now, there are some WARNINGS regarding the unicicle's imem and dmem code, so the tutorial is based on a simple alu.
+ - In the Overleaf there is some instructions in how to make the formal verification without GUI.
  --- 
 Status:   Elaborating design imem   ...  
 Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: RAM Block: /imem File: /home/usuario12/RISC-V/Uniciclo/imem.sv Line: 9)  (FMR_ELAB-147)
