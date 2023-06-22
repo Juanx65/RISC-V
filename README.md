@@ -2,7 +2,7 @@
 # Implementation of a RISC-V processor using the Synopsys Digital Design Flow
 
 ## Table of Contents
-
+0. [Synospys Digital Design Flow](#synopsys-digital-design-flow)
 1. [Specification](#specification)
 2. [RTL: Cell description coding](#rtl-cell-description-coding)
 3. [Console: Syntax Check](#console-syntax-check)
@@ -22,7 +22,8 @@
     - [VSCode SSH connection](#vscode-ssh-connection)
 13. [References](#references)
 
-The Digital Design Flow is the following:
+## Synopsys Digital Design Flow 
+The Digital Design Flow is the following
 
 <div align="center">
       <a href="">
@@ -49,7 +50,7 @@ No se plantea el uso de FPGAs como un objetivo de los proyectos que desarrollara
 
 ## RTL: Cell description coding
 
-* Tests for a simple ALU, an adder, and other descriptions can be found in the test_code folder, with the aim of testing the design flow preliminarily.
+* Tests for a simple ALU, an adder, and other descriptions can be found in the `test_code` folder, with the aim of testing the design flow preliminarily.
 
 * The description of a unicycle processor for testing the design flow can be found in the `Unicycle` folder.
 
@@ -148,13 +149,36 @@ formality
 In the gui we follow the following steps:
 
 * Cargar el RTL en la pestaña `1. Ref`:
-![Vivado Project IP.](img_readme/ref.gif)
+<div align="center">
+      <a href="">
+     <img
+      src="img_readme/ref.gif"
+      alt="flujo de diseño Synopsys"
+      style="width:70%;">
+      </a>
+</div>
 
 * Cargar la Netlist resultante de la sintesis logica en los pasos anteriores en `2. Impl.`:
-![Vivado Project IP.](img_readme/impl.gif)
+
+<div align="center">
+      <a href="">
+     <img
+      src="img_readme/impl.gif"
+      alt="flujo de diseño Synopsys"
+      style="width:70%;">
+      </a>
+</div>
 
 * Match y Verificacion:
-![Vivado Project IP.](img_readme/verify.gif)
+
+<div align="center">
+      <a href="">
+     <img
+      src="img_readme/verify.gif"
+      alt="flujo de diseño Synopsys"
+      style="width:70%;">
+      </a>
+</div>
 
 
  --- 
