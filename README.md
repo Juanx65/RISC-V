@@ -111,7 +111,15 @@ Where you may use the following options:
 
 ## Logic Synthesis
 
-Start the Makefile that runs the `logic_synthesis.tcl` file in the `logic_synthesis` folder.
+--- 
+
+obs:
+
+Make sure to download the skywater library, for this, we have all the files you might need here: `https://drive.google.com/drive/folders/1yW7nUxN1jMjz_ce_J53yK2rmMj6R_uhI?usp=sharing`. Add the content to the `sky130_fd_sc_hd` folder.
+
+---
+
+Run the Makefile that runs the `logic_synthesis.tcl` script in the `logic_synthesis` folder.
 
 ``` 
 cd logic_synthesis
