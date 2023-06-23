@@ -1,40 +1,40 @@
 ##########################################################################################
 # 				PLACE_IO
 ##########################################################################################
-set TCL_PAD_CONSTRAINTS_FILE "pad_placement_constraints.tcl"
-set clock_name clk
-set clock_period 10
+#set TCL_PAD_CONSTRAINTS_FILE "pad_placement_constraints.tcl"
+#set clock_name clk
+#set clock_period 10
 
 
 ## Call out libraries
-set_app_var target_library "sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__tt_100C_1v80.db"
+set_app_var target_library "../sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__tt_100C_1v80.db"
 set_app_var link_library "* $target_library"
 ## change design here
 #sh rm -r /home/usuario12/RISC-V/uniciclo_LIB
 #------------------------------------------
 #  Create milkway enviroment
 # -----------------------------------------
-create_lib -tech "sky130_fd_sc_hd/skywater130_fd_sc_hd.tf" -ref_libs "sky130_fd_sc_hd/ndm/sky130_fd_sc_hd.ndm" uniciclo_LIB
+create_lib -tech "../sky130_fd_sc_hd/skywater130_fd_sc_hd.tf" -ref_libs "../sky130_fd_sc_hd/ndm/sky130_fd_sc_hd.ndm" uniciclo_LIB
 open_lib uniciclo_LIB
-read_parasitic_tech  -tlup "sky130_fd_sc_hd/skywater130.nominal.tluplus" -layermap "sky130_fd_sc_hd/skywater130.mw2itf.map" -name nomTLU
+read_parasitic_tech  -tlup "../sky130_fd_sc_hd/skywater130.nominal.tluplus" -layermap "../sky130_fd_sc_hd/skywater130.mw2itf.map" -name nomTLU
 
 #------------------------------------------
 #  Design
 # -----------------------------------------
-read_verilog "report/uniciclo.v"
-read_sdc "report/uniciclo.sdc"
+read_verilog "../logic_synthesis/report/adder.v"
+read_sdc "../logic_synthesis/report/adder.sdc"
 
 #------------------------------------------
 # Clock
 #------------------------------------------
-create_clock -period ${clock_period} -name clk [get_ports $clock_name]
+#create_clock -period ${clock_period} -name clk [get_ports $clock_name]
 
 ### Timing Model
-set_timing_derate -early 0.93 -cell_delay -net_delay
-set clock uncertainty
-set_max_transition 0.15 [get_clock *] -clock_path
-set_max_transition 0.25 [get_clock *] -data_path
-set_max_capacitance 150 [current_design]
+#set_timing_derate -early 0.93 -cell_delay -net_delay
+#set clock uncertainty
+#set_max_transition 0.15 [get_clock *] -clock_path
+#set_max_transition 0.25 [get_clock *] -data_path
+#set_max_capacitance 150 [current_design]
 
 #------------------------------------------
 #  Floorplan
@@ -47,9 +47,9 @@ initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -cor
 create_net -power D_VDD
 create_net -ground D_VSS
 
-create_pg_ring_pattern ring_pattern -horizontal_layer met1 -horizontal_width {0.48} -horizontal_spacing {0.24} -vertical_layer met2 -vertical_width {0.48} -vertical_spacing {0.24}
-set_pg_strategy core_ring -pattern {{name: ring_pattern} {nets: {D_VDD D_VSS}} {offset: {-1 0.6}}} -core
-compile_pg -strategies core_ring
+#create_pg_ring_pattern ring_pattern -horizontal_layer met1 -horizontal_width {0.48} -horizontal_spacing {0.24} -vertical_layer met2 -vertical_width {0.48} -vertical_spacing {0.24}
+#set_pg_strategy core_ring -pattern {{name: ring_pattern} {nets: {D_VDD D_VSS}} {offset: {-1 0.6}}} -core
+#compile_pg -strategies core_ring
         
 
 #------------------------------------------
