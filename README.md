@@ -111,21 +111,18 @@ Where you may use the following options:
 
 ## Logic Synthesis
 
-Use the `logic_synthesis.tcl` file which takes care of everything.
-
-To be specified:
-- maximum area
-- fanout
-- set_max_transition
-for now, test data was used.
-
-The `logic_synthesis.tcl` file is run with the following command:
+Start the Makefile that runs the `logic_synthesis.tcl` file in the `logic_synthesis` folder.
 
 ``` 
-dc_shell -f logic_synthesis.tcl
+cd logic_synthesis
+make
 ``` 
 
-And as a result, it displays information in the console, as well as data regarding timing, area, power, etc in the `report` folder.
+As a result, it displays information in the console, as well as data regarding timing, area, power, etc in the `logic_synthesis/report` folder.
+
+To clean all the log files, and maintain the reports, do a `make clean`.
+
+--- 
 
 Pending tasks
 - Verify the results of the logic synthesis for the Unicycle or another simple description, especially the reported WNS.
@@ -201,11 +198,14 @@ Text
 
 ### Floorplan:
 
-Correr en la consola el siguiente comando (sigue en construccion): 
+Run using the Makefile in the `icc2` folder, that runs the `icc2_test.tcl` script. 
 
 ```
-icc2_shell -gui -f icc2_test.tcl
+cd icc2
+make
 ```
+
+To clean all the log files, do a `make clean`.
 
 ---
 
@@ -227,7 +227,7 @@ Text
 
 Text
 
-# EXTRAS - WINDOWS 10/11 SYNOPSYS SERVER CONNECTION
+# EXTRA - WINDOWS 10/11 SYNOPSYS SERVER CONNECTION
 
 
 ## MobaXterm Connection
