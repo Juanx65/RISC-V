@@ -3,12 +3,12 @@ set_app_var target_library "../sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__tt_100C_
 set_app_var link_library "* $target_library"
 
 ## RTL Reading and Link
-#analyze -format sverilog {Uniciclo/top.sv Uniciclo/adder.sv Uniciclo/alu.sv Uniciclo/aludec.sv Uniciclo/controller.sv Uniciclo/datapath.sv Uniciclo/dmem.sv Uniciclo/extend.sv Uniciclo/flopr.sv Uniciclo/flopenr.sv Uniciclo/imem.sv Uniciclo/maindec.sv Uniciclo/mux2.sv Uniciclo/mux3.sv Uniciclo/regfile.sv Uniciclo/riscvsingle.sv}
-#analyze -format sverilog test_code/alu_test.sv
-analyze -format sverilog ../test_code/sumador_ff.v
+#analyze -format sverilog {../Uniciclo/top.sv ../Uniciclo/adder.sv ../Uniciclo/alu.sv ../Uniciclo/aludec.sv ../Uniciclo/controller.sv ../Uniciclo/datapath.sv ../Uniciclo/dmem.sv ../Uniciclo/extend.sv ../Uniciclo/flopr.sv ../Uniciclo/flopenr.sv ../Uniciclo/imem.sv ../Uniciclo/maindec.sv ../Uniciclo/mux2.sv ../Uniciclo/mux3.sv ../Uniciclo/regfile.sv ../Uniciclo/riscvsingle.sv}
+analyze -format sverilog ../test_code/alu_test.sv
+#analyze -format sverilog ../test_code/sumador_ff.v
 #elaborate top
-#elaborate alu
-elaborate seq_adder
+elaborate alu
+#elaborate seq_adder
 
 link
 
@@ -54,12 +54,12 @@ compile -exact_map
 # report_power > report/report_power.rpt
 
 ## Save Design
-write_file -format ddc -hierarchy -out report/adder.ddc
-write_file -format verilog -hierarchy -out report/adder.v
-write_sdc report/adder.sdc
+write_file -format ddc -hierarchy -out report/uniciclo.ddc
+write_file -format verilog -hierarchy -out report/uniciclo.v
+write_sdc report/uniciclo.sdc
 
 ## Start GUI
-#gui_start
+gui_start
 
 # Exit
-exit
+#exit

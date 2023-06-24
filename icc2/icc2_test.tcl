@@ -21,8 +21,8 @@ read_parasitic_tech  -tlup "../sky130_fd_sc_hd/skywater130.nominal.tluplus" -lay
 #------------------------------------------
 #  Design
 # -----------------------------------------
-read_verilog "../logic_synthesis/report/adder.v"
-read_sdc "../logic_synthesis/report/adder.sdc"
+read_verilog "../logic_synthesis/report/uniciclo.v"
+read_sdc "../logic_synthesis/report/uniciclo.sdc"
 
 #------------------------------------------
 # Clock
@@ -37,27 +37,34 @@ read_sdc "../logic_synthesis/report/adder.sdc"
 #set_max_capacitance 150 [current_design]
 
 #------------------------------------------
+# UPF
+#------------------------------------------
+
+create_power_domain TOP
+create_supply_net VSS -domain TOP
+create_supply_net VDD -domain TOP
+set_domain_supply_net TOP -primary_power_net VDD -primary_ground_net VSS
+create_supply_port VSS -domain TOP -direction in
+create_supply_port VDD -domain TOP -direction in
+add_port_state VSS  -state {state1 0.000000}
+connect_supply_net VSS -ports {VSS}
+connect_supply_net VDD -ports {VDD}
+
+
+#------------------------------------------
 #  Floorplan
 # -----------------------------------------
 initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -core_side_ratio {1.5 1.0} -core_offset {1 2.6}  -flip_first_row true  -coincident_boundary true
 
+
 #------------------------------------------
 #  Power Rings
 # -----------------------------------------
-create_net -power D_VDD
-create_net -ground D_VSS
-
+#create_net -power VDD
+#create_net -ground VSS
 #create_pg_ring_pattern ring_pattern -horizontal_layer met1 -horizontal_width {0.48} -horizontal_spacing {0.24} -vertical_layer met2 -vertical_width {0.48} -vertical_spacing {0.24}
-#set_pg_strategy core_ring -pattern {{name: ring_pattern} {nets: {D_VDD D_VSS}} {offset: {-1 0.6}}} -core
+#set_pg_strategy core_ring -pattern {{name: ring_pattern} {nets: {VDD VSS}} {offset: {-1 0.6}}} -core
 #compile_pg -strategies core_ring
-        
-
-#------------------------------------------
-#  Pin I/O - MODIFY the pins as required
-# -----------------------------------------
-#set_block_pin_constraints -self
-#place_pins -self -ports {D_VDD D_VSS SrcA SrcB ALUControl ALUResult Zero}
-place_pins -self
 
 #------------------------------------------
 #  Placement
@@ -66,11 +73,19 @@ create_placement -floorplan -timing_driven
 legalize_placement 
 
 connect_pg_net -automatic -all_blocks
+
+#------------------------------------------
+#  Pin I/O - MODIFY the pins as required
+# -----------------------------------------
+set_block_pin_constraints -self
+#place_pins -self -ports {VSS VDD SrcA SrcB ALUControl ALUResult Zero}
+place_pins -self
+
 #-----------------------------------------
 # MESH
 #-----------------------------------------
 create_pg_std_cell_conn_pattern rail_pattern -layer met1 
-set_pg_strategy M1_rails -core -pattern {{name : rail_pattern}{nets: D_VDD D_VSS}}
+set_pg_strategy M1_rails -core -pattern {{name : rail_pattern}{nets: VDD VSS}}
 compile_pg -strategies M1_rails
 
 # -----------------------------------------
