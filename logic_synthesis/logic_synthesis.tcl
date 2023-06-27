@@ -59,7 +59,7 @@ write_file -format verilog -hierarchy -out report/uniciclo.v
 write_sdc report/uniciclo.sdc
 
 ## Start GUI
-gui_start
+#gui_start
 
 # Exit
-#exit
+exit

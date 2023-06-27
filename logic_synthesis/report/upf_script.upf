@@ -3,11 +3,11 @@
 #Domain: TOP
 create_power_domain TOP
 create_supply_net VSS -domain TOP
-create_supply_net TOP_VDD1 -domain TOP
-set_domain_supply_net TOP -primary_power_net TOP_VDD1 -primary_ground_net VSS
+create_supply_net VDD -domain TOP
+set_domain_supply_net TOP -primary_power_net VDD -primary_ground_net VSS
 create_supply_port VSS -domain TOP -direction in
-create_supply_port TOP_VDD1 -domain TOP -direction in
+create_supply_port VDD -domain TOP -direction in
 add_port_state VSS  -state {state1 0.000000}
 connect_supply_net VSS -ports {VSS}
-connect_supply_net TOP_VDD1 -ports {TOP_VDD1}
+connect_supply_net VDD -ports {VDD}
 

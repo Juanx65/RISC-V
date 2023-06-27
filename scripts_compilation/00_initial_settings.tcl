@@ -27,6 +27,8 @@ set import_netlists     ""
 lappend import_netlists "${data_dir}/uniciclo.v"
 
 ### SDC files (to be added)
+set import_sdc     ""
+lappend import_sdc "${data_dir}/uniciclo.sdc"
 
 ### UPF files
 set golden_upf "${data_dir}/upf_script.upf"
@@ -39,7 +41,7 @@ set synopsys_tech_tf "${lib_dir}/skywater130_fd_sc_hd.tf"
 
 ### library files
 set ndm_files ""
-lappend ndm_files "${lib_dir}/ndm/reflib.ndm"
+lappend ndm_files "${lib_dir}/ndm/sky130_fd_sc_hd.ndm"
 
 #set lef_files ""
 #lappend lef_files "${lib_dir}/lef/saed32sram.lef"

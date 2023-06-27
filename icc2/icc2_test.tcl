@@ -69,8 +69,8 @@ connect_supply_net VDD -ports {VDD}
 #------------------------------------------
 #  Floorplan
 # -----------------------------------------
-#initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -core_side_ratio {1.5 1.0} -core_offset {1 2.6}  -flip_first_row true  -coincident_boundary true
-initialize_floorplan -core_utilization 0.5 -core_offset {5} 
+initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -core_side_ratio {1.5 1.0} -core_offset {1 2.6}  -flip_first_row true  -coincident_boundary true
+#initialize_floorplan -core_utilization 0.5 -core_offset {5} 
 #initialize_floorplan -boundary {{0 0} {999.856 999.856}} -core_offset {0 1.672}
 
 #------------------------------------------
