@@ -5,7 +5,6 @@
 #set clock_name clk
 #set clock_period 10
 
-
 ## Call out libraries
 set_app_var target_library "../sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__tt_100C_1v80.db"
 set_app_var link_library "* $target_library"
@@ -47,6 +46,22 @@ set_domain_supply_net TOP -primary_power_net VDD -primary_ground_net VSS
 create_supply_port VSS -domain TOP -direction in
 create_supply_port VDD -domain TOP -direction in
 add_port_state VSS  -state {state1 0.000000}
+
+
+#foreach_in_collection cell [get_cells -hierarchical] {
+#    set vdd_net [get_supply_nets -filter "name == VDD"]
+#    set vss_net [get_supply_nets -filter "name == VSS"]
+#    
+#    if {[llength $vdd_net] == 0} {
+#        create_supply_net VDD
+#    }
+#    
+#    if {[llength $vss_net] == 0} {
+#        create_supply_net VSS
+#    }
+
+#}
+
 connect_supply_net VSS -ports {VSS}
 connect_supply_net VDD -ports {VDD}
 
@@ -54,32 +69,19 @@ connect_supply_net VDD -ports {VDD}
 #------------------------------------------
 #  Floorplan
 # -----------------------------------------
-initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -core_side_ratio {1.5 1.0} -core_offset {1 2.6}  -flip_first_row true  -coincident_boundary true
-
+#initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -core_side_ratio {1.5 1.0} -core_offset {1 2.6}  -flip_first_row true  -coincident_boundary true
+initialize_floorplan -core_utilization 0.5 -core_offset {5} 
+#initialize_floorplan -boundary {{0 0} {999.856 999.856}} -core_offset {0 1.672}
 
 #------------------------------------------
 #  Power Rings
 # -----------------------------------------
+connect_pg_net -automatic -all_blocks
 #create_net -power VDD
 #create_net -ground VSS
 #create_pg_ring_pattern ring_pattern -horizontal_layer met1 -horizontal_width {0.48} -horizontal_spacing {0.24} -vertical_layer met2 -vertical_width {0.48} -vertical_spacing {0.24}
 #set_pg_strategy core_ring -pattern {{name: ring_pattern} {nets: {VDD VSS}} {offset: {-1 0.6}}} -core
 #compile_pg -strategies core_ring
-
-#------------------------------------------
-#  Placement
-# -----------------------------------------
-create_placement -floorplan -timing_driven
-legalize_placement 
-
-connect_pg_net -automatic -all_blocks
-
-#------------------------------------------
-#  Pin I/O - MODIFY the pins as required
-# -----------------------------------------
-set_block_pin_constraints -self
-#place_pins -self -ports {VSS VDD SrcA SrcB ALUControl ALUResult Zero}
-place_pins -self
 
 #-----------------------------------------
 # MESH
@@ -88,11 +90,27 @@ create_pg_std_cell_conn_pattern rail_pattern -layer met1
 set_pg_strategy M1_rails -core -pattern {{name : rail_pattern}{nets: VDD VSS}}
 compile_pg -strategies M1_rails
 
+#------------------------------------------
+#  Pin I/O - MODIFY the pins as required
+# -----------------------------------------
+### create boundary cells : check and set up corner cells
+#set_block_pin_constraints -self
+#place_pins -self -ports {VSS VDD SrcA SrcB ALUControl ALUResult Zero}
+place_pins -self 
+#si le quito el -self me reclama porque no existe boundary cells rules, que es lo que debo averiguar como añadir
+
+#------------------------------------------
+#  Placement
+# -----------------------------------------
+create_placement -floorplan -timing_driven
+legalize_placement 
+
 # -----------------------------------------
 #  Route
 # -----------------------------------------
+route_auto
 #clock_opt
-route_auto -max_detail_route_iterations 5
+#route_auto -max_detail_route_iterations 5
 #save_block $library_name:$top_module
 #write_gds -hier all ${top_module}.gds
 
