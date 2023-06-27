@@ -1,5 +1,5 @@
 ##############################################################
-# Common design settings
+# Initial design settings
 # Created by Juan Aguilera
 # reference: https://github.com/abdelazeem201/ORCA
 ##############################################################

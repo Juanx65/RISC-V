@@ -1,6 +1,7 @@
 ##############################################################
 # Function: read gate level netlist into ICC2
-# Created by Ahmed Abdelazeem
+# Created by Juan Aguilera
+# Reference: https://github.com/abdelazeem201/ORCA
 ##############################################################
 source 00_initial_settings.tcl
 
