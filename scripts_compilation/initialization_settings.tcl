@@ -10,5 +10,6 @@ set_attribute [get_site_defs unit] is_default true
 #set_attribute [get_layers {met2 met4 li1}] routing_direction vertical
 #get_attribute [get_layers M?] routing_direction
 
-set_ignored_layers -min_routing_layer met1 -max_routing_layer met5
-set_message_info -id LGL-003 -limit 10
+#set_ignored_layers -min_routing_layer M2 -max_routing_layer M8
+#set_message_info -id LGL-003 -limit 10
+

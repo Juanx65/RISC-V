@@ -51,6 +51,8 @@ lappend ndm_files "${lib_dir}/ndm/sky130_fd_sc_hd.ndm"
 
 #set icc2rc_tech(cmax)       "${lib_dir}/tech/tluplus/saed32nm_1p9m_Cmax.tluplus"
 #set icc2rc_tech(cmin)       "${lib_dir}/tech/tluplus/saed32nm_1p9m_Cmin.tluplus"
+set icc2rc_tech(cmax)       "${lib_dir}/skywater130.nominal.tluplus"
+set icc2rc_tech(cmin)       "${lib_dir}/skywater130.nominal.tluplus"
 set icc2rc_tech(nominal)    "${lib_dir}/skywater130.nominal.tluplus"
 set itf_tluplus_map         "${lib_dir}/skywater130.mw2itf.map"
 

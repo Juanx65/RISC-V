@@ -1,0 +1,14 @@
+****************************************
+Report : Power/Ground Connection Summary
+Design : alu
+Version: R-2020.09-SP6
+Date   : Fri Jun 30 22:10:11 2023
+****************************************
+P/G net name                  P/G pin count(previous/current)
+--------------------------------------------------------------------------------
+Power net VDD                 42/42
+Unconnected nwell pins        42
+Ground net VSS                42/42
+Unconnected pwell pins        42
+--------------------------------------------------------------------------------
+Information: connections of 0 power/ground pin(s) are created or changed.

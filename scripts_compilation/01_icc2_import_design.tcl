@@ -16,9 +16,6 @@ create_lib -technology $synopsys_tech_tf -ref_libs $ndm_files $nlib_dir/${design
 ### read verilog
 read_verilog -library ${design}_${current_step}.nlib -design ${design} -top $design $import_netlists
 
-### read sdc
-read_sdc $import_sdc
-
 ### initialization script
 source initialization_settings.tcl
 

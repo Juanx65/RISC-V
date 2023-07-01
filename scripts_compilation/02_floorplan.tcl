@@ -35,6 +35,12 @@ source initialization_settings.tcl
 #set scenarios_list $default_scenarios
 #source scenarios_setup.tcl
 
+### read sdc
+read_sdc $import_sdc
+### read parasitic tech
+read_parasitic_tech  -tlup $icc2rc_tech(nominal) -layermap $itf_tluplus_map -name nomTLU
+redirect -file ./connect_pg.rpt { connect_pg_net -auto -verbose }
+
 #------------------------------------------
 #  Floorplan
 # -----------------------------------------
@@ -46,7 +52,14 @@ initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -cor
 #-----------------------------------------
 create_pg_std_cell_conn_pattern rail_pattern -layer met1 
 set_pg_strategy M1_rails -core -pattern {{name : rail_pattern}{nets: VDD VSS}}
+set_app_options -name plan.pgroute.ignore_signal_route -value true 
 compile_pg -strategies M1_rails
+
+## que hacen estos comandos???
+set_app_options -name plan.place.place_inside_blocks -value true
+set_app_options -name place.fix_hard_macros -value false
+set_app_options -name plan.place.auto_generate_blockages -value true
+
 
 #------------------------------------------
 #  Pin I/O 
@@ -57,7 +70,6 @@ place_pins -self -ports [get_ports *]
 #  Create voltage areas
 # -----------------------------------------
 #create_voltage_area -power_domains PD_RISC_CORE -guard_band {{10.032 10}} -region {{0.0000 642.0480} {489.1360 999.8560}}
-create_voltage_area -power_domains TOP
 ### place hard macros
 #source ./data/ORCA_TOP.place_macros.tcl
 #read_def ./data/ORCA_TOP.place_macros.def.gz
@@ -70,14 +82,13 @@ set_app_options -name plan.place.auto_create_blockages -value auto
 #------------------------------------------
 #  Placement
 # -----------------------------------------
-create_placement -floorplan -timing_driven
+create_placement -floorplan -effort low
 legalize_placement 
 
 #------------------------------------------
 #  Keepout margin for macros : how to get macros
 # -----------------------------------------
 #create_keepout_margin -outer {5 5 5 5} [get_flat_cells -filter "design_type==macro"]
-create_keepout_margin -outer {5 5 5 5}
 
 #------------------------------------------
 #  Boundary cells : check and set up corner cells
@@ -87,8 +98,8 @@ create_keepout_margin -outer {5 5 5 5}
 #set_boundary_cell_rules -left_boundary_cell $endcap_left -right_boundary_cell $endcap_right -top_boundary_cell $endcap_top -bottom_boundary_cell $endcap_bottom
 #set_boundary_cell_rules -left_boundary_cell $endcap_left -right_boundary_cell $endcap_right -top_boundary_cell $endcap_top -bottom_boundary_cell $endcap_bottom -bottom_right_inside_corner_cells $endcap_left -bottom_right_outside_corner_cell $endcap_left -top_left_inside_corner_cells $endcap_left -bottom_left_outside_corner_cell $endcap_left -top_left_outside_corner_cell $endcap_left -top_right_outside_corner_cell $endcap_left -bottom_left_inside_corner_cells $endcap_left -top_left_inside_corner_cells $endcap_left -top_right_inside_corner_cells $endcap_left -at_va_boundary
 
-#compile_boundary_cells -voltage_area "PD_RISC_CORE"
-#compile_boundary_cells -voltage_area "DEFAULT_VA"
+#compile_boundary_cells -voltage_area "TOP"
+#check_boundary_cells
 
 #------------------------------------------
 #  Tap cells
