@@ -1,26 +1,32 @@
 
 # Implementation of a RISC-V processor using the Synopsys Digital Design Flow
+Here is the updated index for your README.md:
 
 ## Table of Contents
-0. [Synospys Digital Design Flow](#synopsys-digital-design-flow)
+0. [Synopsys Digital Design Flow](#synopsys-digital-design-flow)
 1. [Specification](#specification)
 2. [RTL: Cell description coding](#rtl-cell-description-coding)
 3. [Console: Syntax Check](#console-syntax-check)
 4. [VCS: Logic simulation](#vcs-logic-simulation)
 5. [Logic Synthesis](#logic-synthesis)
 6. [Formal Verification](#formal-verification)
-7. [Pre-Layour STA (Prime Time)](#pre-layour-sta-prime-time)
+7. [Pre-Layout STA (Prime Time)](#pre-layout-sta-prime-time)
 8. [Floorplanning, placement & Routing](#floorplanning-placement-routing)
 9. [Physical Verification](#physical-verification)
 10. [Post-Layout STA (Prime Time)](#post-layout-sta-prime-time)
 11. [Finished Design](#finished-design)
-12. [Extras - Windows 10/11 Synopsys Server Connection](#extras---windows-1011-synopsys-server-connection)
+12. [Extra - RVSCC by MARIO](#extra-rvscc-by-mario)
+    - [RTL](#rtl)
+    - [Logic Simulation](#logic-simulation)
+    - [Logic Synthesis](#logic-synthesis)
+    - [Floorplan](#floorplan)
+13. [Extra - Windows 10/11 Synopsys Server Connection](#extra---windows-1011-synopsys-server-connection)
     - [MobaXterm Connection](#mobaxterm-connection)
     - [RSA Key Generation - Needed for SSH Connection with VSC](#rsa-key-generation---needed-for-ssh-connection-with-vsc)
     - [Save RSA Public Key at Synopsys Server](#save-rsa-public-key-at-synopsys-server)
     - [Install and run Xlaunch](#install-and-run-xlaunch)
     - [VSCode SSH connection](#vscode-ssh-connection)
-13. [References](#references)
+14. [References](#references)
 
 ## Synopsys Digital Design Flow 
 The Digital Design Flow is the following
@@ -282,6 +288,8 @@ Then you can use `make` in the terminal, being inside the `logic_synthesis` fold
 ## Floorplan
 
 Use the scripts in scripts_compilation as always...
+
+
 ---
 
 # EXTRA - WINDOWS 10/11 SYNOPSYS SERVER CONNECTION
