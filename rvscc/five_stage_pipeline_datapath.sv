@@ -52,7 +52,8 @@ module five_stage_pipeline_datapath (
 
   logic writeback_reg_write;
   logic [31:0] decode_read_data_1, decode_read_data_2;
-  logic [31:0] result, writeback_result;
+  //logic [31:0] result, writeback_result; // aparentemente ese result esta de más, el result que buscamos es execute_alu_result
+  logic [31:0] writeback_result;
   register_file register_file (
       .clk(!clk),
       .rst(rst),

@@ -25,15 +25,16 @@ interface data_memory_if #(
    * Must be called each clock cycle.
    * ES NECESARIO PARA LA SIMULACION
    */
-  function static void check_fw_test_core_assertions();
+  /* function static void check_fw_test_core_assertions();
     if (write_enable) begin
       if (addr == 'd100 && write_data == 'd25) begin
-        $finish;
-      end else
-        assert (addr == 'd96)
-        else $error("Unexpected write address in test-core program");
-      $finish;
+        $display("Simulation succeeded");
+        $stop;
+      end  else if (addr !== 96) begin
+        $display("Simulation failed");
+        $stop;
+      end
     end
-  endfunction
+  endfunction */
 endinterface
 

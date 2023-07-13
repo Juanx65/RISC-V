@@ -29,7 +29,5 @@ module test_five_stage_pipeline_core ();
     rst = 1;
     #4;
     rst = 0;
-    #1000;
-    $stop;
   end
 endmodule

@@ -21,5 +21,5 @@ module instr_memory #(
     mem[instr_mem_if.addr+'d3]
   };
 
-  initial $readmemh("rvscc/rvscctest.mem", mem);
+  initial $readmemh("rvscctest.mem", mem);
 endmodule
