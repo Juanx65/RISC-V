@@ -36,11 +36,11 @@ module test_five_stage_pipeline_core ();
   end
 endmodule
 
-function static void next_instr();
-    addr = addr + 'd4;
+/* function static void next_instr();
+    addr = addr + 'd4; 
 endfunction 
-
-function static void check_fw_test_core_assertions();
+ */
+/* function static void check_fw_test_core_assertions();
     if (write_enable) begin
       if (addr == 'd100 && write_data == 'd25) begin
         $finish;
@@ -49,4 +49,4 @@ function static void check_fw_test_core_assertions();
         else $error("Unexpected write address in test-core program");
       $finish;
     end
-  endfunction
+  endfunction */

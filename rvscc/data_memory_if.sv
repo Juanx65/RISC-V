@@ -23,8 +23,9 @@ interface data_memory_if #(
    * Test assertion that should be used against test-core.s firmware.
    * This function checks if the results in data memory are the expected.
    * Must be called each clock cycle.
+   * QUIZAS ES NECESARIO PARA LA SIMULACION
    */
- /*  function static void check_fw_test_core_assertions();
+  /* function static void check_fw_test_core_assertions();
     if (write_enable) begin
       if (addr == 'd100 && write_data == 'd25) begin
         $finish;

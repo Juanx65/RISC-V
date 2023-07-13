@@ -27,7 +27,8 @@ module five_stage_pipeline_datapath (
   end
 
   logic [31:0] fetch_instr;
-  assign instr_mem_if.addr = instr_mem_if.AddrSize'(fetch_pc);
+  //assign instr_mem_if.addr = instr_mem_if.AddrSize'(fetch_pc);
+  assign instr_mem_if.addr = 20'(fetch_pc); // harcodeado porque osino la sintesis explota
   assign fetch_instr = instr_mem_if.instr;
 
   logic decode_stall, decode_flush;
