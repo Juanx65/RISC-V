@@ -72,12 +72,6 @@ To start a simulation we run in the console the following command:
 
 ```
 vcs -sverilog -debug -cpp -gcc -R -gui <achivo(s)>
-
-```
-ej pipilined:
-
-```
-vcs -sverilog -debug -cpp -gcc -R -gui timescale.sv rv32i_defs.sv test_five_stage_pipeline_core.sv alu_decoder.sv alu.sv cache_memory.sv control_unit.sv data_memory_if.sv data_memory.sv five_stage_pipeline_datapath.sv hazard_unit.sv imm_extend.sv instr_memory_if.sv instr_memory.sv jump_control.sv main_decoder.sv pipelined_control_unit.sv priority_encoder.sv register_file.sv
 ```
 
 Where `-R` runs the simulation (which should be added to the files as a testbench) immediately after compilation.
@@ -242,6 +236,54 @@ Text
 
 Text
 
+--- 
+
+# Extra - RVSCC by MARIO
+
+## RTL
+
+You can find the RTL in the `rvscc` folder.
+You can find the source code here: `https://git.1159.cl/Mario1159/RVSCC`
+
+## Logic Simulation
+
+To run the logic simulation use the following:
+
+```
+vcs -sverilog -debug -cpp -gcc -R -gui timescale.sv rv32i_defs.sv test_five_stage_pipeline_core.sv alu_decoder.sv alu.sv cache_memory.sv control_unit.sv data_memory_if.sv data_memory.sv five_stage_pipeline_datapath.sv hazard_unit.sv imm_extend.sv instr_memory_if.sv instr_memory.sv jump_control.sv main_decoder.sv pipelined_control_unit.sv priority_encoder.sv register_file.sv
+```
+
+Note, if you want to run the Testbench `rvscc/test_five_staged_pipeline_core.sv` of this project, you need to uncomment the following static functions:
+
+* check_fw_test_core_assertions in `rvscc/data_memmory_if.sv` in line 28.
+* next_instr in `rvscc/instr_memory_if.sv` in line 15.
+
+## Logic Synthesis
+
+Note that you need to comment all the static functions for the synthesis to run.
+
+you might run the code in `logic_synthesis` folder, remember to the analyze and elaborate options in the first lines of `logic_synthesis/logic_synthesis.tcl` as follows:
+
+```
+analyze -format sverilog {../rvscc/timescale.sv ../rvscc/rv32i_defs.sv ../rvscc/alu_decoder.sv ../rvscc/alu.sv ../rvscc/cache_memory.sv ../rvscc/control_unit.sv ../rvscc/data_memory_if.sv ../rvscc/data_memory.sv ../rvscc/five_stage_pipeline_datapath.sv ../rvscc/hazard_unit.sv ../rvscc/imm_extend.sv ../rvscc/instr_memory_if.sv ../rvscc/instr_memory.sv ../rvscc/jump_control.sv ../rvscc/main_decoder.sv ../rvscc/pipelined_control_unit.sv ../rvscc/priority_encoder.sv ../rvscc/register_file.sv}
+elaborate five_stage_pipeline_datapath
+```
+
+Change the name of the reports as needed, as example, in line 67:
+```
+## Save Design
+write_file -format ddc -hierarchy -out report/rvscc.ddc
+write_file -format verilog -hierarchy -out report/rvscc.v
+write_sdc report/rvscc.sdc
+```
+
+Then you can use `make` in the terminal, being inside the `logic_synthesis` folder, and it will save the reports for the followings steps of the design in the `logic_synthesis/report` folder.
+
+## Floorplan
+
+Use the scripts in scripts_compilation as always...
+---
+
 # EXTRA - WINDOWS 10/11 SYNOPSYS SERVER CONNECTION
 
 
@@ -317,3 +359,5 @@ Text
 * Formality tutorial: `https://www.youtube.com/watch?v=CFRqPnqifx0`
 
 * ICC tutorial: `https://www.youtube.com/watch?v=BQxG3jzcifg`
+
+* Five Stage Pipeline RISC-V by Mario - RVSCC: `https://git.1159.cl/Mario1159/RVSCC`
