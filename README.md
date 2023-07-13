@@ -72,7 +72,14 @@ To start a simulation we run in the console the following command:
 
 ```
 vcs -sverilog -debug -cpp -gcc -R -gui <achivo(s)>
+
 ```
+ej pipilined:
+
+```
+vcs -sverilog -debug -cpp -gcc -R -gui timescale.sv rv32i_defs.sv test_five_stage_pipeline_core.sv alu_decoder.sv alu.sv cache_memory.sv control_unit.sv data_memory_if.sv data_memory.sv five_stage_pipeline_datapath.sv hazard_unit.sv imm_extend.sv instr_memory_if.sv instr_memory.sv jump_control.sv main_decoder.sv pipelined_control_unit.sv priority_encoder.sv register_file.sv
+```
+
 Where `-R` runs the simulation (which should be added to the files as a testbench) immediately after compilation.
 
 Other options for the VCS command are:

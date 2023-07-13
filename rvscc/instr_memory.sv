@@ -11,8 +11,9 @@ module instr_memory #(
   // Number of bits referenced with one address
   localparam int BlockSize = 8;
   localparam int NumBlocks = NUM_INSTR * 4;
-  logic [BlockSize-1:0] mem[NumBlocks];
-
+  logic [BlockSize-1:0] mem [NumBlocks];
+  //logic [31:0] mem[63:0];
+  
   assign instr_mem_if.instr = {
     mem[instr_mem_if.addr+'d0],
     mem[instr_mem_if.addr+'d1],
@@ -20,5 +21,5 @@ module instr_memory #(
     mem[instr_mem_if.addr+'d3]
   };
 
-  initial $readmemh("rvscc/rvscctest.txt", mem);
+  initial $readmemh("rvscc/rvscctest.mem", mem);
 endmodule

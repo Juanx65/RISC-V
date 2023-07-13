@@ -26,7 +26,7 @@ module pipelined_control_unit (
   );
 
   alu_decoder alu_decoder (
-      .opcode(opcode[5]),
+      .opcode_5(opcode[5]),
       .funct_3(funct_3),
       .funct_7_5(funct_7[5]),
       .alu_op(alu_op),
