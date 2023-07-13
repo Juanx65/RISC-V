@@ -6,7 +6,7 @@ module test_five_stage_pipeline_core ();
 
   instr_memory_if instr_mem_if ();
   instr_memory #(
-      //.FILE_PATH("../fw/test/test-core.mem")
+      //.FILE_PATH("../fw/test/test-core.mem")  // lo hardcodie en el top file porque o sino muere la sintesis
   ) instr_mem (
       .instr_mem_if(instr_mem_if.mem)
   );
