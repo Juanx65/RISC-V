@@ -4,9 +4,13 @@ set_app_var link_library "* $target_library"
 
 ## RTL Reading and Link
 
+## villano
+analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
+elaborate top_risc
+
 ## rvscc
-analyze -format sverilog {../rvscc/timescale.sv ../rvscc/rv32i_defs.sv ../rvscc/alu_decoder.sv ../rvscc/alu.sv ../rvscc/cache_memory.sv ../rvscc/control_unit.sv ../rvscc/data_memory_if.sv ../rvscc/data_memory.sv ../rvscc/five_stage_pipeline_datapath.sv ../rvscc/hazard_unit.sv ../rvscc/imm_extend.sv ../rvscc/instr_memory_if.sv ../rvscc/instr_memory.sv ../rvscc/jump_control.sv ../rvscc/main_decoder.sv ../rvscc/pipelined_control_unit.sv ../rvscc/priority_encoder.sv ../rvscc/register_file.sv}
-elaborate five_stage_pipeline_datapath
+#analyze -format sverilog {../rvscc/timescale.sv ../rvscc/rv32i_defs.sv ../rvscc/alu_decoder.sv ../rvscc/alu.sv ../rvscc/cache_memory.sv ../rvscc/control_unit.sv ../rvscc/data_memory_if.sv ../rvscc/data_memory.sv ../rvscc/five_stage_pipeline_datapath.sv ../rvscc/hazard_unit.sv ../rvscc/imm_extend.sv ../rvscc/instr_memory_if.sv ../rvscc/instr_memory.sv ../rvscc/jump_control.sv ../rvscc/main_decoder.sv ../rvscc/pipelined_control_unit.sv ../rvscc/priority_encoder.sv ../rvscc/register_file.sv}
+#elaborate five_stage_pipeline_datapath
 
 ## uniciclo
 #analyze -format sverilog {../Uniciclo/top.sv ../Uniciclo/adder.sv ../Uniciclo/alu.sv ../Uniciclo/aludec.sv ../Uniciclo/controller.sv ../Uniciclo/datapath.sv ../Uniciclo/dmem.sv ../Uniciclo/extend.sv ../Uniciclo/flopr.sv ../Uniciclo/flopenr.sv ../Uniciclo/imem.sv ../Uniciclo/maindec.sv ../Uniciclo/mux2.sv ../Uniciclo/mux3.sv ../Uniciclo/regfile.sv ../Uniciclo/riscvsingle.sv}
