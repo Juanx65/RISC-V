@@ -37,6 +37,9 @@ source initialization_settings.tcl
 
 ### read sdc
 read_sdc $import_sdc
+### lib
+#set_app_var target_library "../sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__tt_100C_1v80.db"
+#set_app_var link_library "* $target_library"
 ### read parasitic tech
 read_parasitic_tech  -tlup $icc2rc_tech(nominal) -layermap $itf_tluplus_map -name nomTLU
 redirect -file ./connect_pg.rpt { connect_pg_net -auto -verbose }
@@ -45,39 +48,41 @@ redirect -file ./connect_pg.rpt { connect_pg_net -auto -verbose }
 #  Floorplan
 # -----------------------------------------
 #initialize_floorplan -boundary {{0 0} {999.856 999.856}} -core_offset {0 1.672}
-initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -core_side_ratio {1.5 1.0} -core_offset {2 2}  -flip_first_row true  -coincident_boundary true
+initialize_floorplan  -core_utilization 0.7  -core_shape R  -orientation N  -core_side_ratio {1.5 1.0} -core_offset {5 5}  -flip_first_row true  -coincident_boundary true
 
 #-----------------------------------------
-# MESH
+# MESH - RAILS
 #-----------------------------------------
 create_pg_std_cell_conn_pattern rail_pattern -layer met1 
-set_pg_strategy M1_rails -core -pattern {{name : rail_pattern}{nets: VDD VSS}}
+set_pg_strategy M1_rails -core -pattern {{name : rail_pattern}{nets: VPWR VGND}}
 set_app_options -name plan.pgroute.ignore_signal_route -value true 
 compile_pg -strategies M1_rails
 
-## que hacen estos comandos???
-set_app_options -name plan.place.place_inside_blocks -value true
-set_app_options -name place.fix_hard_macros -value false
-set_app_options -name plan.place.auto_generate_blockages -value true
+#-----------------------------------------
+# POWER_RING
+#-----------------------------------------
+create_pg_ring_pattern ring_pattern -horizontal_layer met1 -horizontal_width {0.48} -horizontal_spacing {0.24} -vertical_layer met2 -vertical_width {0.48} -vertical_spacing {0.24}
+set_pg_strategy core_ring -pattern {{name: ring_pattern} {nets: {VPWR VGND}} {offset: {3 3}}} -core
+compile_pg -strategies core_ring 
 
+#set_pg_strategy ring_strat -core pattern {{name:ring_pattern} {nets: {VDD VSS}}} {offset: {3 3}} {parameters: {met5 10 3 met4 10 2 true}} -extension {{stop: design_boundary}}
+#compile_pg -strategies ring_strat
+
+#------------------------------------------
+#  Create voltage areas
+# -----------------------------------------
+#create_voltage_area -power_domains TOP -region {{5 5} {118 78}} -power VDD -ground VSS -name VA1
+
+#set_parasitic_parameters -early_spec nomTLU -late_spec nomTLU
+set_voltage 1.8  -object_list VPWR
+set_voltage 0.00  -object_list VGND
+
+#create_secondary_pg_placement_constraints -name pg_cstr0 -supply VDD -voltage_areas TOP -region {{0 115} {0 75}}
 
 #------------------------------------------
 #  Pin I/O 
 # -----------------------------------------
 place_pins -self -ports [get_ports *]
-
-#------------------------------------------
-#  Create voltage areas
-# -----------------------------------------
-#create_voltage_area -power_domains PD_RISC_CORE -guard_band {{10.032 10}} -region {{0.0000 642.0480} {489.1360 999.8560}}
-### place hard macros
-#source ./data/ORCA_TOP.place_macros.tcl
-#read_def ./data/ORCA_TOP.place_macros.def.gz
-
-## what happens if macros are not fixed
-set_att [get_flat_cells -filter "design_type==macro"] physical_status fixed
-set_app_options -name place.coarse.fix_hard_macros -value false
-set_app_options -name plan.place.auto_create_blockages -value auto
 
 #------------------------------------------
 #  Placement
@@ -110,12 +115,12 @@ legalize_placement
 #------------------------------------------
 # Connect pg
 # -----------------------------------------
-connect_pg_net -automatic -all_blocks
+#connect_pg_net -automatic -all_blocks
 
 # -----------------------------------------
 #  Route
 # -----------------------------------------
-route_auto
+#route_auto
 
 # -----------------------------------------
 # Save design

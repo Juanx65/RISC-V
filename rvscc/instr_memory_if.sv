@@ -12,7 +12,7 @@ interface instr_memory_if #(
   modport mem(input addr, output instr);
   modport datapath(input instr, output addr);
   //  NECEASARIO PARA SIMUALR ??
-  /* function static void next_instr();
+ /*  function static void next_instr();
     addr = addr + 'd4;
   endfunction */
 endinterface

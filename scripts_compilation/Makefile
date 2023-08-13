@@ -11,4 +11,4 @@ import_design:
 .PHONY: clean
 clean:
 	@echo "Limpiando archivos"
-	rm -f -r *.log *.txt work_dir *.svf 
+	rm -f -r *.log *.txt work_dir *.svf  *.rpt
