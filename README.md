@@ -369,3 +369,63 @@ Use the scripts in scripts_compilation as always...
 * ICC tutorial: `https://www.youtube.com/watch?v=BQxG3jzcifg`
 
 * Five Stage Pipeline RISC-V by Mario - RVSCC: `https://git.1159.cl/Mario1159/RVSCC`
+
+
+
+--- 
+
+# INTENTOS REUNION
+
+* VSS y VDD ahora son inout.
+
+* No hay errores en la sintesis.
+
+* Creamos el power ring con estos comandos
+
+``` 
+create_pg_ring_pattern ring_pattern -horizontal_layer met1 -horizontal_width {0.48} -horizontal_spacing {0.24} -vertical_layer met2 -vertical_width {0.48} -vertical_spacing {0.24}
+set_pg_strategy core_ring -pattern {{name: ring_pattern} {nets: {VPWR VGND}} {offset: {3 3}}} -core
+compile_pg -strategies core_ring 
+
+```
+
+No se conecta a los rieles creados anteriormente con este comando
+
+```
+create_pg_std_cell_conn_pattern rail_pattern -layer met1 
+set_pg_strategy M1_rails -core -pattern {{name : rail_pattern}{nets: VPWR VGND}}
+set_app_options -name plan.pgroute.ignore_signal_route -value true 
+compile_pg -strategies M1_rails
+
+```
+
+* hacemos el placement de todos los piens con este comando
+
+```
+place_pins -self -ports [get_ports *]
+```
+
+pd: al usar `get_ports VSS` o VDD si existe, por lo que el comando si deberia tomarlos para hacer el placement.
+
+* Intentamos crear voltage area con comando 
+```
+create_voltage_area -power_domains TOP -region {{5 5} {70 48}} -power VPWR -ground VGND -name VA1
+```
+No funciono en el flujo, pero si dentro de la gui.
+ 
+
+* Intentamos rutear la red de power (luego de crear la VA)
+
+```
+route_group -nets VPWR
+```
+
+      Information: Routes in non-preferred voltage areas = 0 (ZRT-559)
+
+  No funciono.
+
+* Intentamos usar el comando `create_secondary_pg_placement_constant` sin resultados.
+
+      error: "el VSS y VDD son primarios"
+
+
