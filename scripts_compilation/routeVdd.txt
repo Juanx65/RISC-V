@@ -1,0 +1,353 @@
+Cell Min-Routing-Layer = li1
+Cell Max-Routing-Layer = met5
+Turn off antenna since no rule is specified
+Warning: Ignore pin (cell sky130_fd_sc_hd__and2_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__and2_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__conb_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__conb_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__nor2_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__nor2_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__nand4_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__nand4_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__nor4_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__nor4_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__o21ai_0, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__o21ai_0, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__a22oi_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__a22oi_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__clkinv_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__clkinv_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__o211ai_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__o211ai_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__o22ai_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__o22ai_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__nor2b_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__nor2b_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__a221o_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__a221o_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__o221a_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__o221a_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__a21o_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__a21o_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__a21oi_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__a21oi_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__nand2_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__nand2_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__fa_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__fa_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__xor2_1, pin VPB) on layer nwell. (ZRT-030)
+Warning: Ignore pin (cell sky130_fd_sc_hd__xor2_1, pin VNB) on layer pwell. (ZRT-030)
+Warning: Ignore 2 top cell ports with no pins. (ZRT-027)
+Info: number of net_type_blockage: 0 
+Found 1 voltage-areas.
+Wire on layer (met1) needs more than one tracks
+Via on layer (mcon) needs more than one tracks
+Via on layer (via) needs more than one tracks
+Warning: Layer met1 pitch 0.340 may be too small: wire/via-down 0.355, wire/via-up 0.370. (ZRT-026)
+Via on layer (via4) needs more than one tracks
+Warning: Layer met4 pitch 0.920 may be too small: wire/via-down 0.615, wire/via-up 1.040. (ZRT-026)
+Transition layer name: met4(4)
+When applicable Min-max layer allow_pin_connection mode will allow paths of length 5.75 outside the layer range.
+Warning: Standard cell pin sky130_fd_sc_hd__fa_1/A has no valid via regions. (ZRT-044)
+Warning: Standard cell pin sky130_fd_sc_hd__fa_1/B has no valid via regions. (ZRT-044)
+Start Global Route ... 
+[Init] Elapsed real time: 0:00:00 
+[Init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Init] Total (MB): Used   15  Alloctr   16  Proc 3027 
+Printing options for 'route.common.*'
+
+Printing options for 'route.global.*'
+
+Begin global routing.
+Constructing data structure ...
+Design statistics:
+Design Bounding Box (0.00,0.00,76.24,53.52)
+Number of routing layers = 6
+layer li1, dir Hor, min width = 0.17, min space = 0.17 pitch = 0.46
+layer met1, dir Ver, min width = 0.14, min space = 0.14 pitch = 0.34
+layer met2, dir Hor, min width = 0.14, min space = 0.14 pitch = 0.46
+layer met3, dir Ver, min width = 0.3, min space = 0.3 pitch = 0.68
+layer met4, dir Hor, min width = 0.3, min space = 0.3 pitch = 0.92
+layer met5, dir Ver, min width = 1.6, min space = 1.6 pitch = 3.4
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00 
+[End of Build Tech Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Tech Data] Total (MB): Used   19  Alloctr   20  Proc 3027 
+Net statistics:
+Total number of nets     = 349
+Number of nets to route  = 1
+Number of single or zero port nets = 1
+2 nets are fully connected,
+ of which 2 are detail routed and 0 are global routed.
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:00 
+[End of Build All Nets] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build All Nets] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build All Nets] Total (MB): Used   19  Alloctr   20  Proc 3027 
+Average gCell capacity  2.23	 on layer (1)	 li1
+Average gCell capacity  1.17	 on layer (2)	 met1
+Average gCell capacity  5.10	 on layer (3)	 met2
+Average gCell capacity  3.69	 on layer (4)	 met3
+Average gCell capacity  2.67	 on layer (5)	 met4
+Average gCell capacity  0.69	 on layer (6)	 met5
+Average number of tracks per gCell 5.57	 on layer (1)	 li1
+Average number of tracks per gCell 7.76	 on layer (2)	 met1
+Average number of tracks per gCell 5.57	 on layer (3)	 met2
+Average number of tracks per gCell 3.90	 on layer (4)	 met3
+Average number of tracks per gCell 2.81	 on layer (5)	 met4
+Average number of tracks per gCell 0.79	 on layer (6)	 met5
+Number of gCells = 3654
+Current Stage stats:
+[End of Build Congestion map] Elapsed real time: 0:00:00 
+[End of Build Congestion map] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Congestion map] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Congestion map] Total (MB): Used   20  Alloctr   20  Proc 3027 
+Net Count 0, Total HPWL 0 microns
+HPWL   0 ~  100 microns: Net Count        0	Total HPWL          0 microns
+HPWL 100 ~  200 microns: Net Count        0	Total HPWL          0 microns
+HPWL 200 ~  300 microns: Net Count        0	Total HPWL          0 microns
+HPWL 300 ~  400 microns: Net Count        0	Total HPWL          0 microns
+HPWL 400 ~  500 microns: Net Count        0	Total HPWL          0 microns
+HPWL 500 ~  600 microns: Net Count        0	Total HPWL          0 microns
+HPWL 600 ~  700 microns: Net Count        0	Total HPWL          0 microns
+HPWL 700 ~  800 microns: Net Count        0	Total HPWL          0 microns
+HPWL 800 ~  900 microns: Net Count        0	Total HPWL          0 microns
+HPWL 900 ~ 1000 microns: Net Count        0	Total HPWL          0 microns
+HPWL     > 1000 microns: Net Count        0	Total HPWL          0 microns
+Number of user frozen nets = 0
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:00 
+[End of Build Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Data] Total (MB): Used   20  Alloctr   20  Proc 3027 
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:00 
+[End of Blocked Pin Detection] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Blocked Pin Detection] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Blocked Pin Detection] Total (MB): Used   20  Alloctr   20  Proc 3027 
+Information: Using 1 threads for routing. (ZRT-444)
+multi gcell levels ON
+
+Start GR phase 0
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:00:00 
+[End of Initial Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Initial Routing] Stage (MB): Used  176  Alloctr  176  Proc    0 
+[End of Initial Routing] Total (MB): Used  196  Alloctr  196  Proc 3027 
+Initial. Routing result:
+Initial. Both Dirs: Overflow =     0 Max = 0 GRCs =     0 (0.00%)
+Initial. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. V routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. li1        Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. met1       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. met2       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. met3       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. met4       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. met5       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+Initial. Total Wire Length = 0.00
+Initial. Layer li1 wire length = 0.00
+Initial. Layer met1 wire length = 0.00
+Initial. Layer met2 wire length = 0.00
+Initial. Layer met3 wire length = 0.00
+Initial. Layer met4 wire length = 0.00
+Initial. Layer met5 wire length = 0.00
+Initial. Total Number of Contacts = 0
+Initial. Via L1M1_PR count = 0
+Initial. Via M1M2_PR count = 0
+Initial. Via M2M3_PR count = 0
+Initial. Via M3M4_PR count = 0
+Initial. Via M4M5_PR count = 0
+Initial. completed.
+
+Start GR phase 1
+Current Stage stats:
+[End of Phase1 Routing] Elapsed real time: 0:00:00 
+[End of Phase1 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase1 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase1 Routing] Total (MB): Used  196  Alloctr  196  Proc 3027 
+phase1. Routing result:
+phase1. Both Dirs: Overflow =     0 Max = 0 GRCs =     0 (0.00%)
+phase1. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. V routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. li1        Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. met1       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. met2       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. met3       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. met4       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. met5       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase1. Total Wire Length = 0.00
+phase1. Layer li1 wire length = 0.00
+phase1. Layer met1 wire length = 0.00
+phase1. Layer met2 wire length = 0.00
+phase1. Layer met3 wire length = 0.00
+phase1. Layer met4 wire length = 0.00
+phase1. Layer met5 wire length = 0.00
+phase1. Total Number of Contacts = 0
+phase1. Via L1M1_PR count = 0
+phase1. Via M1M2_PR count = 0
+phase1. Via M2M3_PR count = 0
+phase1. Via M3M4_PR count = 0
+phase1. Via M4M5_PR count = 0
+phase1. completed.
+
+Start GR phase 2
+Current Stage stats:
+[End of Phase2 Routing] Elapsed real time: 0:00:00 
+[End of Phase2 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase2 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase2 Routing] Total (MB): Used  196  Alloctr  196  Proc 3027 
+phase2. Routing result:
+phase2. Both Dirs: Overflow =     0 Max = 0 GRCs =     0 (0.00%)
+phase2. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. V routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. li1        Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. met1       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. met2       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. met3       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. met4       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. met5       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase2. Total Wire Length = 0.00
+phase2. Layer li1 wire length = 0.00
+phase2. Layer met1 wire length = 0.00
+phase2. Layer met2 wire length = 0.00
+phase2. Layer met3 wire length = 0.00
+phase2. Layer met4 wire length = 0.00
+phase2. Layer met5 wire length = 0.00
+phase2. Total Number of Contacts = 0
+phase2. Via L1M1_PR count = 0
+phase2. Via M1M2_PR count = 0
+phase2. Via M2M3_PR count = 0
+phase2. Via M3M4_PR count = 0
+phase2. Via M4M5_PR count = 0
+phase2. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:00:01 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
+[End of Whole Chip Routing] Stage (MB): Used  176  Alloctr  176  Proc    0 
+[End of Whole Chip Routing] Total (MB): Used  196  Alloctr  196  Proc 3027 
+
+Congestion utilization per direction:
+Average vertical track utilization   =  0.00 %
+Peak    vertical track utilization   =  0.00 %
+Average horizontal track utilization =  0.00 %
+Peak    horizontal track utilization =  0.00 %
+
+Current Stage stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[GR: Done] Total (MB): Used  195  Alloctr  196  Proc 3027 
+GR Total stats:
+[GR: Done] Elapsed real time: 0:00:01 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
+[GR: Done] Stage (MB): Used  180  Alloctr  180  Proc    0 
+[GR: Done] Total (MB): Used  195  Alloctr  196  Proc 3027 
+Updating congestion ...
+Updating congestion ...
+Final total stats:
+[End of Global Routing] Elapsed real time: 0:00:01 
+[End of Global Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
+[End of Global Routing] Stage (MB): Used   32  Alloctr   32  Proc    0 
+[End of Global Routing] Total (MB): Used   47  Alloctr   48  Proc 3027 
+
+Start track assignment
+
+Printing options for 'route.common.*'
+
+Printing options for 'route.track.*'
+
+Information: Using 1 threads for routing. (ZRT-444)
+
+[Track Assign: Read routes] Elapsed real time: 0:00:00 
+[Track Assign: Read routes] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Track Assign: Read routes] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Track Assign: Read routes] Total (MB): Used   11  Alloctr   12  Proc 3027 
+Printing options for 'route.common.*'
+
+Printing options for 'route.detail.*'
+detail.force_end_on_preferred_grid                      :	 true                
+
+Printing options for 'route.auto_via_ladder.*'
+
+[Dr init] Elapsed real time: 0:00:00 
+[Dr init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Dr init] Stage (MB): Used    4  Alloctr    4  Proc    0 
+[Dr init] Total (MB): Used   15  Alloctr   16  Proc 3027 
+Total number of nets = 349, of which 0 are not extracted
+Total number of open nets = 346, of which 0 are frozen
+Information: Using 1 threads for routing. (ZRT-444)
+Start DR iteration 0: uniform partition
+
+DRC-SUMMARY:
+	@@@@@@@ TOTAL VIOLATIONS =	0
+
+[Iter 0] Elapsed real time: 0:00:00 
+[Iter 0] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Iter 0] Stage (MB): Used   31  Alloctr   31  Proc    0 
+[Iter 0] Total (MB): Used   43  Alloctr   43  Proc 3027 
+
+End DR iteration 0 with 6 parts
+
+Finish DR since reached 0 DRC
+
+[DR] Elapsed real time: 0:00:00 
+[DR] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[DR] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[DR] Total (MB): Used   11  Alloctr   12  Proc 3027 
+[DR: Done] Elapsed real time: 0:00:00 
+[DR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[DR: Done] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[DR: Done] Total (MB): Used   11  Alloctr   12  Proc 3027 
+
+DR finished with 0 open nets, of which 0 are frozen
+
+DR finished with 0 violations
+
+DRC-SUMMARY:
+	@@@@@@@ TOTAL VIOLATIONS =	0
+
+
+
+Total Wire Length =                    0 micron
+Total Number of Contacts =             0
+Total Number of Wires =                0
+Total Number of PtConns =              0
+Total Number of Routed Wires =       0
+Total Routed Wire Length =           0 micron
+Total Number of Routed Contacts =       0
+	Layer      li1 :          0 micron
+	Layer     met1 :          0 micron
+	Layer     met2 :          0 micron
+	Layer     met3 :          0 micron
+	Layer     met4 :          0 micron
+	Layer     met5 :          0 micron
+
+ 
+Redundant via conversion report:
+--------------------------------
+
+  Total optimized via conversion rate =  0.00% (0 / 0 vias)
+ 
+ 
+  Total double via conversion rate    =  0.00% (0 / 0 vias)
+ 
+ 
+  The optimized via conversion rate based on total routed via count =  0.00% (0 / 0 vias)
+ 
+ 
+
+Total number of nets = 349
+0 open nets, of which 0 are frozen
+Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                 0 ports without pins of 0 cells connected to 0 nets
+                                 0 ports of 0 cover cells connected to 0 non-pg nets
+Total number of DRCs = 0
+Total number of antenna violations = antenna checking not active
+Information: Routes in non-preferred voltage areas = 0 (ZRT-559)
+
+Topology ECO not run, no qualifying violations or in frozen nets.
+Updating the database ...
