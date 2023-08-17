@@ -424,8 +424,8 @@ route_group -nets VPWR
 
   No funciono.
 
-* Intentamos usar el comando `create_secondary_pg_placement_constant` sin resultados.
+* Intentamos usar el comando `create_secondary_pg_placement_constraints -name pg_cstr0 -supply VPWR -voltage_areas DEFAULT_VA -region {{0 115} {0 75}}` sin resultados.
 
-      error: "el VSS y VDD son primarios"
+ `Error: Supply 'VPWR' is domain primary of voltage area 'DEFAULT_VA'. (MV-252)`
 
 
