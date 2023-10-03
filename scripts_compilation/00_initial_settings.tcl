@@ -57,7 +57,10 @@ set icc2rc_tech(nominal)    "${lib_dir}/skywater130.nominal.tluplus"
 set itf_tluplus_map         "${lib_dir}/skywater130.mw2itf.map"
 
 ### scenarios of each step
-#set default_scenarios  "func_ss0p75v125c_cmax"
+
+set default_scenarios   "func_tt0p80v100c_cmax"
+# functional typical-typical 0.8 volts 100°C cmax ??
+#set default_scenarios   "func_ss0p75v125c_cmax"
 #set placeopt_scenarios "func_ss0p75v125c_cmax test_ss0p75v125c_cmax"
 #set clock_scenarios    "cts_ss0p75v125c_cmax"
 #set clockopt_scenarios "func_ss0p75v125c_cmax test_ss0p75v125c_cmax func_ff0p95vm40c_cmin test_ff0p95v125c_cmin"
