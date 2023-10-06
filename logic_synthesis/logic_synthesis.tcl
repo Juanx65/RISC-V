@@ -11,11 +11,11 @@ set_app_var link_library "* $target_library"
 #analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
 #elaborate hazard_unit
 
-#analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
-#elaborate Fetch
-
 analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
-elaborate alu
+elaborate Fetch
+
+#analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
+#elaborate alu
 
 ## rvscc
 #analyze -format sverilog {../rvscc/timescale.sv ../rvscc/rv32i_defs.sv ../rvscc/alu_decoder.sv ../rvscc/alu.sv ../rvscc/cache_memory.sv ../rvscc/control_unit.sv ../rvscc/data_memory_if.sv ../rvscc/data_memory.sv ../rvscc/five_stage_pipeline_datapath.sv ../rvscc/hazard_unit.sv ../rvscc/imm_extend.sv ../rvscc/instr_memory_if.sv ../rvscc/instr_memory.sv ../rvscc/jump_control.sv ../rvscc/main_decoder.sv ../rvscc/pipelined_control_unit.sv ../rvscc/priority_encoder.sv ../rvscc/register_file.sv}
@@ -81,6 +81,7 @@ compile -exact_map
 write_file -format ddc -hierarchy -out report/uniciclo.ddc
 write_file -format verilog -hierarchy -out report/uniciclo.v
 write_sdc report/uniciclo.sdc
+#write_scandef report/RISC_TOP.scandef
 
 ## Start GUI
 #gui_start

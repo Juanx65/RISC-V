@@ -1,0 +1,11 @@
+create_supply_net VSS
+create_supply_net VDD
+
+create_power_domain TOP
+set_domain_supply_net TOP -primary_power_net VDD -primary_ground_net VSS
+
+create_supply_port VSS -domain TOP -direction inout
+create_supply_port VDD -domain TOP -direction inout
+
+connect_supply_net VSS -ports VSS
+connect_supply_net VDD -ports VDD
