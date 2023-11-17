@@ -5,3 +5,7 @@ report/*
 *.mr
 *.log
 *.svf
+data/nlib/*
+logic_synthesis/models/*
+*.db
+scripts_compilation/check_design.ems
