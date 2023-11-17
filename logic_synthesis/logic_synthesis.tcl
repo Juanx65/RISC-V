@@ -1,18 +1,22 @@
 ## Librarys
-set_app_var target_library "../sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__tt_100C_1v80.db"
-set_app_var link_library "* $target_library"
+#set_app_var target_library "../sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__tt_100C_1v80.db"
+#set_app_var link_library "* $target_library"
+
+set synthetic_library dw_foundation.sldb
+set_app_var target_library {"models/saed32io_ss0p95v125c_2p25v.db" "models/saed32pll_ff1p16v125c_2p75v.db" "models/saed32pll_ss0p95v125c_2p25v.db" "models/saed32pll_ss0p95v125c_2p25v.db" "models/saed32rvt_ff0p85v125c.db" "models/saed32rvt_ff1p16v125c.db" "models/saed32rvt_ss0p95v125c.db"}
+set_app_var link_library "* $target_library $synthetic_library"
 
 ## RTL Reading and Link
 
 ## villano
-#analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
-#elaborate top_risc
+analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
+elaborate top_risc
 
 #analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
 #elaborate hazard_unit
 
-analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
-elaborate Fetch
+#analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
+#elaborate Fetch
 
 #analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
 #elaborate alu

@@ -4,7 +4,7 @@
 # reference: https://github.com/abdelazeem201/ORCA
 ##############################################################
 ### design information
-set design "RISC_TOP"
+set design "top_risc"
 
 ### design data directory
 set data_dir "../data"
@@ -60,10 +60,10 @@ set itf_tluplus_map         "${lib_dir}/tech/tluplus/saed32nm_tf_itf_tluplus.map
 ### scenarios of each step
 
 set default_scenarios  "func_ss0p75v125c_cmax"
-#set placeopt_scenarios "func_ss0p75v125c_cmax test_ss0p75v125c_cmax"
-#set clock_scenarios    "cts_ss0p75v125c_cmax"
-#set clockopt_scenarios "func_ss0p75v125c_cmax test_ss0p75v125c_cmax func_ff0p95vm40c_cmin test_ff0p95v125c_cmin"
-#set routeopt_scenarios "func_ss0p75v125c_cmax test_ss0p75v125c_cmax func_ff0p95vm40c_cmin test_ff0p95v125c_cmin"
+set placeopt_scenarios "func_ss0p75v125c_cmax test_ss0p75v125c_cmax"
+set clock_scenarios    "cts_ss0p75v125c_cmax"
+set clockopt_scenarios "func_ss0p75v125c_cmax test_ss0p75v125c_cmax func_ff0p95vm40c_cmin test_ff0p95v125c_cmin"
+set routeopt_scenarios "func_ss0p75v125c_cmax test_ss0p75v125c_cmax func_ff0p95vm40c_cmin test_ff0p95v125c_cmin"
 
 ### cells type settings
 set fillers_ref     "*/SHFILL128_HVT */SHFILL64_HVT */SHFILL3_HVT */SHFILL2_HVT */SHFILL1_HVT"
