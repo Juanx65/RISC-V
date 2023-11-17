@@ -16,8 +16,8 @@ connect_pg_net
 #-----------------------------------------
 create_pg_mesh_pattern std_mesh \
 	-layers { \
-		{ {horizontal_layer: M7} {width: 1.104} {spacing: interleaving} {pitch: 13.376} {offset: 0.856} {trim : true} } \
-		{ {vertical_layer: M8}   {width: 4.64 } {spacing: interleaving} {pitch: 19.456} {offset: 6.08}  {trim : true} } \
+		{ {horizontal_layer: M7} {width: 2} {spacing: interleaving} {pitch: 14} {offset: 0} {trim : true} } \
+		{ {vertical_layer: M8}   {width: 2} {spacing: interleaving} {pitch: 14} {offset: 0} {trim : true} } \
 		} \
 	-via_rule { {intersection: adjacent}}
 
@@ -26,34 +26,41 @@ set_pg_strategy default_vdd_vss \
 	-pattern   { {name: std_mesh} {nets:{VSS VDD}} } \
 	-extension { {{stop:design_boundary_and_generate_pin}} }
 
-compile_pg -strategies {default_vdd_vss}
-
+# se hace una mesh adicional que conecte los rienes en M1 con el resto del circuito pg
 create_pg_mesh_pattern M2_mesh \
 	-layers { \
-		{ {vertical_layer: M2}  {track_alignment : track} {width: 0.44 0.192 0.192} {spacing: 2 3} {pitch: 9} {offset: 1} {trim : true} } }
+		{ {vertical_layer: M2} {track_alignment : track}{width: 0.5}{spacing: interleaving}{pitch: 8}{offset: 0} {trim : true} } }
 
 set_pg_strategy m2_vddvss \
 	-core \
-	-pattern   { {name: M2_mesh} {nets: {VDD VSS VSS}} {offset_start: {2 0}} } \
+	-pattern   { {name: M2_mesh} {nets: {VDD VSS}} } \
 	-extension { {{direction:BT} {stop:design_boundary_and_generate_pin}} }
 
-################################################################################
+compile_pg -strategies {m2_vddvss default_vdd_vss}
+
+#-----------------------------------------
 # Build rings around the macros then connect them
+#-----------------------------------------
 suppress_message PGR-599
 
 create_pg_ring_pattern ring_pattern -horizontal_layer M7 -horizontal_width {1} -vertical_layer M8 -vertical_width {1} -corner_bridge false
 set_pg_strategy core_ring -pattern {{name: ring_pattern} {nets: {VDD VSS}} {offset: {0.3 0.3}}} -core
 compile_pg -strategies core_ring
 
-################################################################################
+#-----------------------------------------
 # Build the standard cell rails
+#-----------------------------------------
+# aun no entiendo porque los rieles M1 no se conectan a los anillos :c sera porque son M7 M8?
+create_pg_std_cell_conn_pattern std_cell_rail
 
-create_pg_std_cell_conn_pattern rail_pattern
-set_pg_strategy std_cell_rail \
-    -core \
-    -pattern {{name : rail_pattern}{nets: VDD VSS}}  \
-    -extension {{stop: outermost_ring}{direction: L B R T }}
-compile_pg -strategies std_cell_rail
+set_pg_strategy std_cell_rail_VSS_VDD \
+	-core \
+	-pattern {{pattern: std_cell_rail}{nets: {VSS VDD}}} \
+	-extension {{stop: outermost_ring}{direction: L B R T }}
 
+set_pg_strategy_via_rule via_stdcellrail \
+        -via_rule {{intersection: adjacent}{via_master: default}}
 
+compile_pg -strategies {std_cell_rail_VSS_VDD} -via_rule {via_stdcellrail}
 
+return

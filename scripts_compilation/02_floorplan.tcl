@@ -40,21 +40,37 @@ source scenarios_setup.tcl
 # -----------------------------------------
 #initialize_floorplan -boundary {{0 0} {999.856 999.856}} -core_offset {0 2}
 initialize_floorplan  -core_utilization 0.7 -core_offset {20}
-
-################ intentos
 shape_blocks
-create_placement -floorplan
+
+#------------------------------------------
+#  Placement
+# -----------------------------------------
+create_placement -floorplan -timing_driven
+legalize_placement 
+
+#------------------------------------------
+#  Pin I/O - MODIFY the pins as required
+# -----------------------------------------
 set_block_pin_constraints -self -allowed_layers {M3 M4 M5 M6}
 place_pins -self
 
-
-source -echo pns.tcl
 #------------------------------------------
-# place ports
+#  Power Routing
 # -----------------------------------------
+source -echo pns.tcl
 
 ### connect pg
 connect_pg_net -automatic
+
+# -----------------------------------------
+#  Route
+# -----------------------------------------
+route_auto
+#clock_opt
+#route_auto -max_detail_route_iterations 5
+#save_block $library_name:$top_module
+write_gds -hier all reports/top_risc.gds
+
 
 ### save design
 save_block -force
@@ -63,7 +79,6 @@ save_lib
 ### exit icc2
 print_message_info
 #quit!
-
 ##############################################################
 # END
 ##############################################################
