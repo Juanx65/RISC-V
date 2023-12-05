@@ -9,3 +9,6 @@ data/nlib/*
 logic_synthesis/models/*
 *.db
 scripts_compilation/check_design.ems
+saed_mc_v3_0_1/*
+*.log
+openram/*

@@ -69,7 +69,7 @@ route_auto
 #clock_opt
 #route_auto -max_detail_route_iterations 5
 #save_block $library_name:$top_module
-write_gds -hier all reports/top_risc.gds
+write_gds -hier all "..reports/top_risc.gds"
 
 
 ### save design

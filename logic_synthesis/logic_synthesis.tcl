@@ -1,16 +1,20 @@
 ## Librarys
-#set_app_var target_library "../sky130_fd_sc_hd/db_nldm/sky130_fd_sc_hd__tt_100C_1v80.db"
-#set_app_var link_library "* $target_library"
 
 set synthetic_library dw_foundation.sldb
-set_app_var target_library {"models/saed32io_ss0p95v125c_2p25v.db" "models/saed32pll_ff1p16v125c_2p75v.db" "models/saed32pll_ss0p95v125c_2p25v.db" "models/saed32pll_ss0p95v125c_2p25v.db" "models/saed32rvt_ff0p85v125c.db" "models/saed32rvt_ff1p16v125c.db" "models/saed32rvt_ss0p95v125c.db"}
+#set_app_var target_library {"models/saed32io_ss0p95v125c_2p25v.db" "models/saed32pll_ff1p16v125c_2p75v.db" "models/saed32pll_ss0p95v125c_2p25v.db" "models/saed32pll_ss0p95v125c_2p25v.db" "models/saed32rvt_ff0p85v125c.db" "models/saed32rvt_ff1p16v125c.db" "models/saed32rvt_ss0p95v125c.db"}
+#set_app_var target_library {"models_sky/sky130_fd_sc_hd__tt_100C_1v80.db" "models_sky/sky130_fd_sc_hd__tt_025C_1v80.db" "models_sky/sky130_fd_sc_hd__ss_n40C_1v76.db" "models_sky/sky130_fd_sc_hd__ss_n40C_1v44.db" "models_sky/sky130_fd_sc_hd__ss_n40C_1v40.db" "models_sky/sky130_fd_sc_hd__ss_n40C_1v35.db" "models_sky/sky130_fd_sc_hd__ss_n40C_1v28.db" "models_sky/sky130_fd_sc_hd__ss_100C_1v60.db" "models_sky/sky130_fd_sc_hd__ss_100C_1v40.db" "models_sky/sky130_fd_sc_hd__ff_n40C_1v76.db" "models_sky/sky130_fd_sc_hd__ff_n40C_1v65.db" "models_sky/sky130_fd_sc_hd__ff_n40C_1v56.db" "models_sky/sky130_fd_sc_hd__ff_100C_1v95.db" "models_sky/sky130_fd_sc_hd__ff_100C_1v65.db"}
+set_app_var target_library {"models_sky/sram_32_32_sky130A_TT_1p8V_25C.db" "models_sky/sky130_fd_sc_hd__tt_100C_1v80.db" "models_sky/sky130_fd_sc_hd__tt_025C_1v80.db" "models_sky/sky130_fd_sc_hd__ss_n40C_1v76.db" "models_sky/sky130_fd_sc_hd__ss_n40C_1v44.db" "models_sky/sky130_fd_sc_hd__ss_n40C_1v40.db" "models_sky/sky130_fd_sc_hd__ss_n40C_1v35.db" "models_sky/sky130_fd_sc_hd__ss_n40C_1v28.db" "models_sky/sky130_fd_sc_hd__ss_100C_1v60.db" "models_sky/sky130_fd_sc_hd__ss_100C_1v40.db" "models_sky/sky130_fd_sc_hd__ff_n40C_1v76.db" "models_sky/sky130_fd_sc_hd__ff_n40C_1v65.db" "models_sky/sky130_fd_sc_hd__ff_n40C_1v56.db" "models_sky/sky130_fd_sc_hd__ff_100C_1v95.db" "models_sky/sky130_fd_sc_hd__ff_100C_1v65.db"}
 set_app_var link_library "* $target_library $synthetic_library"
 
 ## RTL Reading and Link
 
+## picorv32
+analyze -format verilog { ../test_code/main.v ../test_code/picorv32.v  }
+elaborate main
+
 ## villano
-analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
-elaborate top_risc
+#analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
+#elaborate top_risc
 
 #analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
 #elaborate hazard_unit
@@ -88,7 +92,7 @@ write_sdc report/uniciclo.sdc
 #write_scandef report/RISC_TOP.scandef
 
 ## Start GUI
-#gui_start
+gui_start
 
 # Exit
-exit
+#exit
