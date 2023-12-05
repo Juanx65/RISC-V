@@ -29,6 +29,11 @@ assign RAM[17] = 32'h00100113;
 assign RAM[18] = 32'h00910133;
 assign RAM[19] = 32'h0221A023;
 assign RAM[20] = 32'h00210063;
+assign RAM[21] = 32'h00210063;
+assign RAM[22] = 32'h00210063;
+assign RAM[23] = 32'h00210063;
+assign RAM[24] = 32'h00210063;
+assign RAM[25] = 32'h00210063;
 //initial
    //$readmemh("Uniciclo/riscvtest.txt",RAM);
 assign rd = RAM[a[7:2]]; // word aligned

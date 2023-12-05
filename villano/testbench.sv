@@ -23,17 +23,16 @@ module testbench();
     end
 
     // check results
-    always @(negedge clk)
-    begin
-    //#500; $stop;
+    always @(negedge clk) begin
+        //#500; $stop;
         if(mem_wrM) begin
-            if(ALU_resultM === 100 & wr_dataM === 25) begin
-            $display("Simulation succeeded");
-            $stop;
-            end else if (ALU_resultM !== 96) begin
-                $display("Simulation failed");
+                if(ALU_resultM === 100 & wr_dataM === 25) begin
+                $display("Simulation succeeded");
                 $stop;
+                end else if (ALU_resultM !== 96) begin
+                    $display("Simulation failed");
+                    $stop;
+                end
             end
-        end
     end
 endmodule

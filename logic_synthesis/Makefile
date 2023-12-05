@@ -4,6 +4,7 @@
 run:
 	@echo "Ejecutando dc_shell con logic_synthesis.tcl"
 	dc_shell -f logic_synthesis.tcl
+	rm -f *.log *.svf *.pvl *.syn *.mr
 
 .PHONY: clean
 clean:

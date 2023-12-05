@@ -16,6 +16,15 @@ mux2 #(32) pcmux(PCp4F, PC_targetE, PC_srcE, PCF_new);
 assign PCp4F = PCF + 'd4;
 imem instr_memory(PCF, instrF);
 
+/* sram_32_32_sky130A imem(
+		.clk0(clk),
+		.addr0({1'b0,imem_addr}),
+		.din0(imem_wdata),//debería venir de la uart
+		.dout0(imem_rdata),
+		.csb0(1'b0),
+		.web0(imem_web) //depende de la uart
+	); */
+
 always_ff @(posedge clk)
 begin
     if(rst) PCF <= 'd0;
