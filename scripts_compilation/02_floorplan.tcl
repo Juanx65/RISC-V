@@ -51,7 +51,7 @@ legalize_placement
 #------------------------------------------
 #  Pin I/O - MODIFY the pins as required
 # -----------------------------------------
-set_block_pin_constraints -self -allowed_layers {M3 M4 M5 M6}
+set_block_pin_constraints -self -allowed_layers {met2 met3}
 place_pins -self
 
 #------------------------------------------
