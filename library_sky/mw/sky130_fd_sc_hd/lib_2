@@ -1,0 +1,3983 @@
+*
+ VPWR 20
+ VGND 36
+ VPB 20
+ VNB 36
+sky130_fd_sc_hd__tap_1
+ VNB 36
+ VPB 20
+ VGND 36
+ VPWR 20
+sky130_fd_sc_hd__tap_2
+ VNB 36
+ VPB 20
+ VGND 36
+ VPWR 20
+sky130_fd_sc_hd__tapvgnd_1
+ VPB 20
+ VGND 36
+ VPWR 20
+ VNB 36
+sky130_fd_sc_hd__tapvgnd2_1
+ VPB 20
+ VGND 36
+ VPWR 20
+ VNB 36
+sky130_fd_sc_hd__tapvpwrvgnd_1
+ VPWR 20
+ VGND 36
+ VPB 20
+ VNB 36
+unitTile
+ VPWR 20
+ VGND 36
+ VPB 20
+ VNB 36
+sky130_fd_sc_hd__fill_1
+ VPWR 20
+ VGND 36
+ VPB 20
+ VNB 36
+sky130_fd_sc_hd__fill_2
+ VGND 36
+ VPWR 20
+ VPB 20
+ VNB 36
+sky130_fd_sc_hd__fill_4
+ VGND 36
+ VPWR 20
+ VPB 20
+ VNB 36
+sky130_fd_sc_hd__fill_8
+ VGND 36
+ VPWR 20
+ VPB 20
+ VNB 36
+sky130_fd_sc_hd__a2111o_1
+ A2 1
+ X 2
+ D1 1
+ C1 1
+ B1 1
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a2111o_2
+ X 2
+ C1 1
+ B1 1
+ D1 1
+ A1 1
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a2111o_4
+ D1 1
+ C1 1
+ B1 1
+ A1 1
+ A2 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a2111oi_0
+ D1 1
+ Y 2
+ C1 1
+ B1 1
+ A2 1
+ A1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a2111oi_1
+ A1 1
+ D1 1
+ C1 1
+ B1 1
+ Y 2
+ A2 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a2111oi_2
+ D1 1
+ C1 1
+ A2 1
+ A1 1
+ Y 2
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a2111oi_4
+ D1 1
+ C1 1
+ B1 1
+ A2 1
+ A1 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a211o_1
+ A2 1
+ B1 1
+ A1 1
+ X 2
+ C1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a211o_2
+ X 2
+ A2 1
+ A1 1
+ B1 1
+ C1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a211o_4
+ C1 1
+ B1 1
+ X 2
+ A2 1
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a211oi_1
+ Y 2
+ A2 1
+ A1 1
+ B1 1
+ C1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a211oi_2
+ C1 1
+ Y 2
+ A1 1
+ A2 1
+ B1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a211oi_4
+ A2 1
+ A1 1
+ C1 1
+ Y 2
+ B1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21bo_1
+ X 2
+ B1_N 1
+ A1 1
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21bo_2
+ B1_N 1
+ A2 1
+ X 2
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21bo_4
+ B1_N 1
+ A2 1
+ A1 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21boi_0
+ B1_N 1
+ Y 2
+ A1 1
+ A2 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21boi_1
+ Y 2
+ A2 1
+ B1_N 1
+ A1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21boi_2
+ B1_N 1
+ A2 1
+ A1 1
+ Y 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21boi_4
+ Y 2
+ A1 1
+ B1_N 1
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21o_1
+ A2 1
+ A1 1
+ B1 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21o_2
+ X 2
+ B1 1
+ A2 1
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21o_4
+ A2 1
+ A1 1
+ X 2
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21oi_1
+ A1 1
+ B1 1
+ Y 2
+ A2 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21oi_2
+ B1 1
+ A2 1
+ A1 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a21oi_4
+ B1 1
+ A2 1
+ A1 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a221o_1
+ B1 1
+ B2 1
+ X 2
+ A2 1
+ A1 1
+ C1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a221o_2
+ B1 1
+ B2 1
+ X 2
+ A2 1
+ A1 1
+ C1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a221o_4
+ B1 1
+ C1 1
+ B2 1
+ A2 1
+ X 2
+ A1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a221oi_1
+ Y 2
+ C1 1
+ A2 1
+ B2 1
+ A1 1
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a221oi_2
+ A2 1
+ A1 1
+ B1 1
+ B2 1
+ Y 2
+ C1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a221oi_4
+ A2 1
+ Y 2
+ C1 1
+ A1 1
+ B2 1
+ B1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a222oi_1
+ C2 1
+ C1 1
+ B1 1
+ A2 1
+ A1 1
+ Y 2
+ B2 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a22o_1
+ A2 1
+ B2 1
+ A1 1
+ B1 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a22o_2
+ A2 1
+ B2 1
+ A1 1
+ B1 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a22o_4
+ B1 1
+ B2 1
+ X 2
+ A2 1
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a22oi_1
+ B1 1
+ B2 1
+ A2 1
+ A1 1
+ Y 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a22oi_2
+ A1 1
+ A2 1
+ Y 2
+ B2 1
+ B1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a22oi_4
+ A2 1
+ B2 1
+ A1 1
+ B1 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a2bb2o_1
+ B1 1
+ A2_N 1
+ B2 1
+ A1_N 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a2bb2o_2
+ B1 1
+ A2_N 1
+ B2 1
+ A1_N 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a2bb2o_4
+ B1 1
+ B2 1
+ X 2
+ A1_N 1
+ A2_N 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a2bb2oi_1
+ A1_N 1
+ Y 2
+ B2 1
+ B1 1
+ A2_N 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a2bb2oi_2
+ A2_N 1
+ A1_N 1
+ Y 2
+ B2 1
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a2bb2oi_4
+ Y 2
+ A2_N 1
+ B2 1
+ A1_N 1
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a311o_1
+ A1 1
+ A2 1
+ B1 1
+ C1 1
+ A3 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a311o_2
+ C1 1
+ B1 1
+ A1 1
+ A2 1
+ A3 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a311o_4
+ C1 1
+ A1 1
+ A2 1
+ A3 1
+ X 2
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a311oi_1
+ A3 1
+ C1 1
+ B1 1
+ A1 1
+ A2 1
+ Y 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a311oi_2
+ C1 1
+ A1 1
+ A3 1
+ Y 2
+ B1 1
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a311oi_4
+ Y 2
+ C1 1
+ B1 1
+ A3 1
+ A2 1
+ A1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a31o_1
+ A2 1
+ A3 1
+ A1 1
+ X 2
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a31o_2
+ X 2
+ A1 1
+ B1 1
+ A3 1
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a31o_4
+ A1 1
+ A3 1
+ B1 1
+ A2 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a31oi_1
+ Y 2
+ B1 1
+ A1 1
+ A2 1
+ A3 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a31oi_2
+ B1 1
+ Y 2
+ A1 1
+ A3 1
+ A2 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a31oi_4
+ Y 2
+ B1 1
+ A3 1
+ A2 1
+ A1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a32o_1
+ A3 1
+ A1 1
+ B1 1
+ B2 1
+ A2 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a32o_2
+ A2 1
+ A3 1
+ A1 1
+ B2 1
+ B1 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a32o_4
+ X 2
+ B1 1
+ B2 1
+ A2 1
+ A3 1
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a32oi_1
+ Y 2
+ A1 1
+ B2 1
+ B1 1
+ A2 1
+ A3 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a32oi_2
+ A3 1
+ A2 1
+ A1 1
+ Y 2
+ B1 1
+ B2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a32oi_4
+ A2 1
+ A3 1
+ B2 1
+ Y 2
+ B1 1
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a41o_1
+ A4 1
+ A2 1
+ A1 1
+ B1 1
+ X 2
+ A3 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a41o_2
+ B1 1
+ A1 1
+ A3 1
+ X 2
+ A4 1
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a41o_4
+ A4 1
+ A3 1
+ A2 1
+ A1 1
+ B1 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a41oi_1
+ B1 1
+ Y 2
+ A2 1
+ A4 1
+ A3 1
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a41oi_2
+ A4 1
+ A3 1
+ A2 1
+ A1 1
+ B1 1
+ Y 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__a41oi_4
+ A4 1
+ A3 1
+ A2 1
+ A1 1
+ B1 1
+ Y 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and2_0
+ X 2
+ B 1
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and2_1
+ X 2
+ B 1
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and2_2
+ A 1
+ X 2
+ B 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and2_4
+ X 2
+ B 1
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and2b_1
+ A_N 1
+ B 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and2b_2
+ B 1
+ A_N 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and2b_4
+ B 1
+ X 2
+ A_N 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and3_1
+ X 2
+ B 1
+ A 1
+ C 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and3_2
+ B 1
+ A 1
+ C 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and3_4
+ A 1
+ B 1
+ C 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and3b_1
+ B 1
+ C 1
+ X 2
+ A_N 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and3b_2
+ B 1
+ A_N 1
+ C 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and3b_4
+ A_N 1
+ X 2
+ C 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and4_1
+ A 1
+ C 1
+ B 1
+ D 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and4_2
+ A 1
+ C 1
+ B 1
+ D 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and4_4
+ C 1
+ A 1
+ B 1
+ D 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and4b_1
+ X 2
+ A_N 1
+ B 1
+ D 1
+ C 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and4b_2
+ X 2
+ D 1
+ C 1
+ B 1
+ A_N 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and4b_4
+ D 1
+ C 1
+ A_N 1
+ X 2
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and4bb_1
+ A_N 1
+ X 2
+ B_N 1
+ C 1
+ D 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and4bb_2
+ B_N 1
+ C 1
+ A_N 1
+ X 2
+ D 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__and4bb_4
+ C 1
+ A_N 1
+ D 1
+ X 2
+ B_N 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__buf_1
+ X 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__buf_12
+ X 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__buf_16
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__buf_2
+ X 2
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__buf_4
+ X 2
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__buf_6
+ X 2
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__buf_8
+ X 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__bufbuf_16
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__bufbuf_8
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__bufinv_16
+ A 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__bufinv_8
+ A 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkbuf_1
+ X 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkbuf_16
+ X 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkbuf_2
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkbuf_4
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkbuf_8
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkdlybuf4s15_1
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkdlybuf4s15_2
+ A 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkdlybuf4s18_1
+ A 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkdlybuf4s18_2
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkdlybuf4s25_1
+ A 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkdlybuf4s25_2
+ X 2
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkdlybuf4s50_1
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkdlybuf4s50_2
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkinv_1
+ Y 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkinv_16
+ Y 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkinv_2
+ Y 2
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkinv_4
+ A 1
+ Y 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkinv_8
+ Y 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkinvlp_2
+ Y 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__clkinvlp_4
+ Y 2
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__conb_1
+ LO 2
+ HI 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__decap_12
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__decap_3
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__decap_4
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__decap_6
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__decap_8
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfbbn_1
+ RESET_B 1
+ CLK_N 1
+ SET_B 1
+ Q 2
+ D 1
+ Q_N 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfbbn_2
+ RESET_B 1
+ CLK_N 1
+ SET_B 1
+ Q 2
+ D 1
+ Q_N 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfbbp_1
+ RESET_B 1
+ CLK 1
+ SET_B 1
+ Q 2
+ D 1
+ Q_N 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfrbp_1
+ Q 2
+ Q_N 2
+ D 1
+ CLK 1
+ RESET_B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfrbp_2
+ Q 2
+ Q_N 2
+ D 1
+ CLK 1
+ RESET_B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfrtn_1
+ CLK_N 1
+ Q 2
+ D 1
+ RESET_B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfrtp_1
+ Q 2
+ D 1
+ CLK 1
+ RESET_B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfrtp_2
+ Q 2
+ D 1
+ CLK 1
+ RESET_B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfrtp_4
+ Q 2
+ D 1
+ CLK 1
+ RESET_B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfsbp_1
+ Q 2
+ Q_N 2
+ D 1
+ SET_B 1
+ CLK 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfsbp_2
+ Q_N 2
+ D 1
+ Q 2
+ SET_B 1
+ CLK 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfstp_1
+ D 1
+ Q 2
+ SET_B 1
+ CLK 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfstp_2
+ D 1
+ Q 2
+ SET_B 1
+ CLK 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfstp_4
+ D 1
+ Q 2
+ SET_B 1
+ CLK 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfxbp_1
+ Q_N 2
+ D 1
+ CLK 1
+ Q 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfxbp_2
+ Q_N 2
+ D 1
+ CLK 1
+ Q 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfxtp_1
+ Q 2
+ CLK 1
+ D 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfxtp_2
+ Q 2
+ CLK 1
+ D 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dfxtp_4
+ CLK 1
+ Q 2
+ D 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__diode_2
+ DIODE 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlclkp_1
+ GATE 1
+ GCLK 2
+ CLK 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlclkp_2
+ GATE 1
+ GCLK 2
+ CLK 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlclkp_4
+ GCLK 2
+ CLK 1
+ GATE 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlrbn_1
+ RESET_B 1
+ D 1
+ GATE_N 1
+ Q_N 2
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlrbn_2
+ D 1
+ GATE_N 1
+ Q 2
+ RESET_B 1
+ Q_N 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlrbp_1
+ RESET_B 1
+ Q_N 2
+ D 1
+ GATE 1
+ Q 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlrbp_2
+ Q 2
+ RESET_B 1
+ Q_N 2
+ D 1
+ GATE 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlrtn_1
+ RESET_B 1
+ D 1
+ GATE_N 1
+ Q 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlrtn_2
+ RESET_B 1
+ Q 2
+ D 1
+ GATE_N 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlrtn_4
+ D 1
+ GATE_N 1
+ RESET_B 1
+ Q 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlrtp_1
+ D 1
+ GATE 1
+ Q 2
+ RESET_B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlrtp_2
+ RESET_B 1
+ Q 2
+ D 1
+ GATE 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlrtp_4
+ RESET_B 1
+ Q 2
+ D 1
+ GATE 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlxbn_1
+ D 1
+ GATE_N 1
+ Q 2
+ Q_N 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlxbn_2
+ D 1
+ GATE_N 1
+ Q 2
+ Q_N 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlxbp_1
+ D 1
+ GATE 1
+ Q 2
+ Q_N 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlxtn_1
+ D 1
+ GATE_N 1
+ Q 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlxtn_2
+ D 1
+ GATE_N 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlxtn_4
+ D 1
+ GATE_N 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlxtp_1
+ D 1
+ GATE 1
+ Q 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlygate4sd1_1
+ X 2
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlygate4sd2_1
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlygate4sd3_1
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlymetal6s2s_1
+ A 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlymetal6s4s_1
+ A 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__dlymetal6s6s_1
+ A 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__ebufn_1
+ TE_B 1
+ A 1
+ Z 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__ebufn_2
+ A 1
+ TE_B 1
+ Z 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__ebufn_4
+ Z 2
+ TE_B 1
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__ebufn_8
+ A 1
+ TE_B 1
+ Z 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__edfxbp_1
+ CLK 1
+ Q_N 2
+ DE 1
+ D 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__edfxtp_1
+ CLK 1
+ DE 1
+ D 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__einvn_0
+ TE_B 1
+ A 1
+ Z 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__einvn_1
+ Z 2
+ A 1
+ TE_B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__einvn_2
+ TE_B 1
+ A 1
+ Z 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__einvn_4
+ TE_B 1
+ Z 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__einvn_8
+ TE_B 1
+ Z 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__einvp_1
+ TE 1
+ A 1
+ Z 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__einvp_2
+ A 1
+ Z 2
+ TE 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__einvp_4
+ TE 1
+ A 1
+ Z 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__einvp_8
+ A 1
+ TE 1
+ Z 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__fa_1
+ COUT 2
+ CIN 1
+ SUM 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__fa_2
+ COUT 2
+ SUM 2
+ A 1
+ B 1
+ CIN 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__fa_4
+ COUT 2
+ SUM 2
+ A 1
+ B 1
+ CIN 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__fah_1
+ COUT 2
+ A 1
+ SUM 2
+ CI 1
+ B 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__fahcin_1
+ COUT 2
+ A 1
+ SUM 2
+ CIN 1
+ VPWR 20
+ VGND 36
+ B 1
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__fahcon_1
+ COUT_N 2
+ A 1
+ SUM 2
+ CI 1
+ VPWR 20
+ VGND 36
+ B 1
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__ha_1
+ SUM 2
+ COUT 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__ha_2
+ SUM 2
+ COUT 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__ha_4
+ SUM 2
+ A 1
+ B 1
+ COUT 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__inv_1
+ Y 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__inv_12
+ Y 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__inv_16
+ Y 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__inv_2
+ A 1
+ Y 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__inv_4
+ Y 2
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__inv_6
+ Y 2
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__inv_8
+ A 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_bleeder_1
+ SHORT 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_clkbufkapwr_1
+ X 2
+ A 1
+ KAPWR 16777236
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_clkbufkapwr_16
+ X 2
+ A 1
+ KAPWR 16777236
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_clkbufkapwr_2
+ A 1
+ X 2
+ KAPWR 16777236
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_clkbufkapwr_4
+ A 1
+ X 2
+ KAPWR 16777236
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_clkbufkapwr_8
+ A 1
+ X 2
+ KAPWR 16777236
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_clkinvkapwr_1
+ Y 2
+ A 1
+ KAPWR 16777236
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_clkinvkapwr_16
+ Y 2
+ A 1
+ KAPWR 16777236
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_clkinvkapwr_2
+ Y 2
+ A 1
+ KAPWR 16777236
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_clkinvkapwr_4
+ A 1
+ Y 2
+ KAPWR 16777236
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_clkinvkapwr_8
+ Y 2
+ A 1
+ KAPWR 16777236
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_decapkapwr_12
+ VGND 36
+ VPWR 20
+ KAPWR 16777236
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_decapkapwr_3
+ VPWR 20
+ VGND 36
+ KAPWR 16777236
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_decapkapwr_4
+ VGND 36
+ VPWR 20
+ KAPWR 16777236
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_decapkapwr_6
+ VPWR 20
+ VGND 36
+ KAPWR 16777236
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_decapkapwr_8
+ VPWR 20
+ VGND 36
+ KAPWR 16777236
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_inputiso0n_1
+ X 2
+ SLEEP_B 1
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_inputiso0p_1
+ SLEEP 1
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_inputiso1n_1
+ A 1
+ SLEEP_B 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_inputiso1p_1
+ SLEEP 1
+ X 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_inputisolatch_1
+ SLEEP_B 1
+ D 1
+ Q 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_isobufsrc_1
+ A 1
+ X 2
+ SLEEP 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_isobufsrc_16
+ A 1
+ X 2
+ SLEEP 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_isobufsrc_2
+ A 1
+ SLEEP 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_isobufsrc_4
+ A 1
+ X 2
+ SLEEP 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_isobufsrc_8
+ A 1
+ X 2
+ SLEEP 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_isobufsrckapwr_16
+ X 2
+ A 1
+ SLEEP 1
+ VGND 36
+ VPWR 20
+ KAPWR 16777236
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1
+ A 1
+ X 2
+ VPB 67108900
+ VGND 36
+ VPWRIN 16777236
+ VPWR 20
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2
+ A 1
+ X 2
+ VPB 67108900
+ VGND 36
+ VPWRIN 16777236
+ VPWR 20
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4
+ A 1
+ X 2
+ VPB 67108900
+ VGND 36
+ VPWRIN 16777236
+ VPWR 20
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4
+ A 1
+ X 2
+ VGND 36
+ LOWLVPWR 0
+ VPWR 16777236
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1
+ A 1
+ X 2
+ VPB 67108900
+ VGND 36
+ LOWLVPWR 0
+ VPWR 16777236
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2
+ A 1
+ X 2
+ VPB 67108900
+ VGND 36
+ LOWLVPWR 0
+ VPWR 16777236
+ VNB 67108884
+sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4
+ A 1
+ X 2
+ VPB 67108900
+ VGND 36
+ LOWLVPWR 0
+ VPWR 16777236
+ VNB 67108884
+sky130_fd_sc_hd__macro_sparecell
+ LO 2
+ VNB 67108884
+ VPWR 20
+ VGND 36
+ VPB 67108900
+sky130_fd_sc_hd__maj3_1
+ C 1
+ B 1
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__maj3_2
+ B 1
+ A 1
+ C 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__maj3_4
+ B 1
+ C 1
+ A 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__mux2_1
+ S 1
+ A1 1
+ A0 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__mux2_2
+ A1 1
+ X 2
+ A0 1
+ S 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__mux2_4
+ X 2
+ S 1
+ A1 1
+ A0 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__mux2_8
+ A0 1
+ X 2
+ S 1
+ A1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__mux2i_1
+ S 1
+ A0 1
+ A1 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__mux2i_2
+ A1 1
+ Y 2
+ A0 1
+ S 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__mux2i_4
+ S 1
+ A0 1
+ Y 2
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__mux4_1
+ S0 1
+ S1 1
+ A2 1
+ A1 1
+ A0 1
+ X 2
+ A3 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__mux4_2
+ S0 1
+ A2 1
+ A3 1
+ S1 1
+ A1 1
+ A0 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__mux4_4
+ X 2
+ S0 1
+ A2 1
+ A3 1
+ S1 1
+ A1 1
+ A0 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand2_1
+ Y 2
+ B 1
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand2_2
+ Y 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand2_4
+ Y 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand2_8
+ Y 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand2b_1
+ Y 2
+ A_N 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand2b_2
+ B 1
+ Y 2
+ A_N 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand2b_4
+ B 1
+ A_N 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand3_1
+ Y 2
+ A 1
+ C 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand3_2
+ A 1
+ Y 2
+ B 1
+ C 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand3_4
+ Y 2
+ B 1
+ A 1
+ C 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand3b_1
+ B 1
+ C 1
+ A_N 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand3b_2
+ C 1
+ A_N 1
+ Y 2
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand3b_4
+ A_N 1
+ B 1
+ C 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand4_1
+ C 1
+ B 1
+ Y 2
+ D 1
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand4_2
+ B 1
+ A 1
+ Y 2
+ D 1
+ C 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand4_4
+ A 1
+ D 1
+ C 1
+ B 1
+ Y 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand4b_1
+ Y 2
+ C 1
+ D 1
+ A_N 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand4b_2
+ D 1
+ C 1
+ B 1
+ Y 2
+ A_N 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand4b_4
+ B 1
+ Y 2
+ A_N 1
+ D 1
+ C 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand4bb_1
+ C 1
+ D 1
+ A_N 1
+ B_N 1
+ Y 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand4bb_2
+ D 1
+ B_N 1
+ A_N 1
+ Y 2
+ C 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nand4bb_4
+ B_N 1
+ A_N 1
+ Y 2
+ C 1
+ D 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor2_1
+ B 1
+ Y 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor2_2
+ B 1
+ Y 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor2_4
+ Y 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor2_8
+ Y 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor2b_1
+ B_N 1
+ Y 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor2b_2
+ B_N 1
+ A 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor2b_4
+ B_N 1
+ Y 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor3_1
+ C 1
+ Y 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor3_2
+ C 1
+ Y 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor3_4
+ A 1
+ C 1
+ B 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor3b_1
+ C_N 1
+ Y 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor3b_2
+ C_N 1
+ Y 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor3b_4
+ A 1
+ C_N 1
+ B 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor4_1
+ C 1
+ D 1
+ Y 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor4_2
+ C 1
+ D 1
+ Y 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor4_4
+ A 1
+ C 1
+ Y 2
+ D 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor4b_1
+ C 1
+ B 1
+ A 1
+ D_N 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor4b_2
+ D_N 1
+ Y 2
+ C 1
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor4b_4
+ B 1
+ A 1
+ D_N 1
+ C 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor4bb_1
+ A 1
+ C_N 1
+ D_N 1
+ B 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor4bb_2
+ D_N 1
+ C_N 1
+ A 1
+ Y 2
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__nor4bb_4
+ D_N 1
+ Y 2
+ A 1
+ B 1
+ C_N 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o2111a_1
+ D1 1
+ C1 1
+ B1 1
+ A2 1
+ A1 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o2111a_2
+ D1 1
+ C1 1
+ A2 1
+ B1 1
+ X 2
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o2111a_4
+ X 2
+ A1 1
+ A2 1
+ C1 1
+ B1 1
+ D1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o2111ai_1
+ D1 1
+ C1 1
+ A2 1
+ A1 1
+ B1 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o2111ai_2
+ A1 1
+ A2 1
+ B1 1
+ C1 1
+ D1 1
+ Y 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o2111ai_4
+ A1 1
+ A2 1
+ B1 1
+ C1 1
+ D1 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o211a_1
+ C1 1
+ B1 1
+ A2 1
+ A1 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o211a_2
+ C1 1
+ B1 1
+ A2 1
+ A1 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o211a_4
+ A1 1
+ X 2
+ C1 1
+ A2 1
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o211ai_1
+ A1 1
+ A2 1
+ Y 2
+ C1 1
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o211ai_2
+ A1 1
+ A2 1
+ B1 1
+ Y 2
+ C1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o211ai_4
+ A1 1
+ B1 1
+ A2 1
+ C1 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21a_1
+ X 2
+ A1 1
+ B1 1
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21a_2
+ A1 1
+ B1 1
+ A2 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21a_4
+ A1 1
+ A2 1
+ B1 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21ai_0
+ Y 2
+ B1 1
+ A2 1
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21ai_1
+ A1 1
+ A2 1
+ B1 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21ai_2
+ A2 1
+ Y 2
+ A1 1
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21ai_4
+ Y 2
+ B1 1
+ A2 1
+ A1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21ba_1
+ B1_N 1
+ A1 1
+ X 2
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21ba_2
+ B1_N 1
+ A1 1
+ X 2
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21ba_4
+ B1_N 1
+ A1 1
+ A2 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21bai_1
+ A1 1
+ Y 2
+ B1_N 1
+ A2 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21bai_2
+ B1_N 1
+ Y 2
+ A2 1
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o21bai_4
+ Y 2
+ B1_N 1
+ A1 1
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o221a_1
+ X 2
+ B1 1
+ C1 1
+ A1 1
+ A2 1
+ B2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o221a_2
+ A2 1
+ X 2
+ B1 1
+ C1 1
+ A1 1
+ B2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o221a_4
+ C1 1
+ A1 1
+ A2 1
+ B1 1
+ B2 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o221ai_1
+ A2 1
+ B1 1
+ C1 1
+ A1 1
+ Y 2
+ B2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o221ai_2
+ B1 1
+ B2 1
+ Y 2
+ A2 1
+ A1 1
+ C1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o221ai_4
+ B1 1
+ B2 1
+ A2 1
+ C1 1
+ Y 2
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o22a_1
+ A2 1
+ X 2
+ B1 1
+ A1 1
+ B2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o22a_2
+ A2 1
+ X 2
+ B1 1
+ A1 1
+ B2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o22a_4
+ B2 1
+ B1 1
+ X 2
+ A1 1
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o22ai_1
+ A2 1
+ B1 1
+ Y 2
+ A1 1
+ B2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o22ai_2
+ B2 1
+ B1 1
+ Y 2
+ A1 1
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o22ai_4
+ A1 1
+ Y 2
+ A2 1
+ B1 1
+ B2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o2bb2a_1
+ A1_N 1
+ X 2
+ A2_N 1
+ B2 1
+ B1 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o2bb2a_2
+ A1_N 1
+ X 2
+ A2_N 1
+ B2 1
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o2bb2a_4
+ A2_N 1
+ A1_N 1
+ X 2
+ B2 1
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o2bb2ai_1
+ Y 2
+ A1_N 1
+ A2_N 1
+ B2 1
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o2bb2ai_2
+ B2 1
+ Y 2
+ A1_N 1
+ A2_N 1
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o2bb2ai_4
+ A1_N 1
+ B1 1
+ B2 1
+ A2_N 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o311a_1
+ A1 1
+ B1 1
+ C1 1
+ X 2
+ A3 1
+ A2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o311a_2
+ A1 1
+ A2 1
+ A3 1
+ B1 1
+ C1 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o311a_4
+ A1 1
+ A3 1
+ B1 1
+ C1 1
+ X 2
+ A2 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o311ai_0
+ A2 1
+ A3 1
+ B1 1
+ C1 1
+ A1 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o311ai_1
+ A2 1
+ A3 1
+ B1 1
+ C1 1
+ A1 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o311ai_2
+ C1 1
+ B1 1
+ A3 1
+ A2 1
+ A1 1
+ Y 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o311ai_4
+ Y 2
+ C1 1
+ B1 1
+ A3 1
+ A2 1
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o31a_1
+ B1 1
+ A2 1
+ X 2
+ A1 1
+ A3 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o31a_2
+ A1 1
+ B1 1
+ A2 1
+ X 2
+ A3 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o31a_4
+ X 2
+ B1 1
+ A3 1
+ A2 1
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o31ai_1
+ A1 1
+ A3 1
+ B1 1
+ A2 1
+ Y 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o31ai_2
+ Y 2
+ B1 1
+ A3 1
+ A2 1
+ A1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o31ai_4
+ A2 1
+ A1 1
+ B1 1
+ Y 2
+ A3 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o32a_1
+ A1 1
+ A3 1
+ B1 1
+ A2 1
+ B2 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o32a_2
+ B1 1
+ B2 1
+ A3 1
+ A2 1
+ A1 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o32a_4
+ X 2
+ B2 1
+ A1 1
+ A2 1
+ A3 1
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o32ai_1
+ Y 2
+ A1 1
+ A2 1
+ A3 1
+ B2 1
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o32ai_2
+ A1 1
+ A2 1
+ A3 1
+ Y 2
+ B1 1
+ B2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o32ai_4
+ A1 1
+ A2 1
+ A3 1
+ B1 1
+ Y 2
+ B2 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o41a_1
+ A1 1
+ A2 1
+ A3 1
+ A4 1
+ B1 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o41a_2
+ A1 1
+ A2 1
+ A3 1
+ A4 1
+ B1 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o41a_4
+ A1 1
+ A2 1
+ A3 1
+ A4 1
+ B1 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o41ai_1
+ A1 1
+ A2 1
+ A3 1
+ A4 1
+ Y 2
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o41ai_2
+ A1 1
+ A2 1
+ A4 1
+ Y 2
+ B1 1
+ A3 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__o41ai_4
+ A1 1
+ A2 1
+ A3 1
+ A4 1
+ Y 2
+ B1 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or2_0
+ A 1
+ X 2
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or2_1
+ A 1
+ X 2
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or2_2
+ B 1
+ X 2
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or2_4
+ X 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or2b_1
+ A 1
+ B_N 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or2b_2
+ A 1
+ B_N 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or2b_4
+ A 1
+ B_N 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or3_1
+ X 2
+ A 1
+ B 1
+ C 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or3_2
+ X 2
+ A 1
+ B 1
+ C 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or3_4
+ A 1
+ X 2
+ C 1
+ B 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or3b_1
+ C_N 1
+ X 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or3b_2
+ A 1
+ B 1
+ C_N 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or3b_4
+ A 1
+ B 1
+ C_N 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or4_1
+ A 1
+ X 2
+ B 1
+ C 1
+ D 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or4_2
+ A 1
+ X 2
+ B 1
+ C 1
+ D 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or4_4
+ B 1
+ A 1
+ C 1
+ D 1
+ X 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or4b_1
+ A 1
+ X 2
+ B 1
+ D_N 1
+ C 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or4b_2
+ A 1
+ X 2
+ C 1
+ B 1
+ D_N 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or4b_4
+ D_N 1
+ B 1
+ A 1
+ C 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or4bb_1
+ A 1
+ X 2
+ B 1
+ D_N 1
+ C_N 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or4bb_2
+ A 1
+ X 2
+ B 1
+ D_N 1
+ C_N 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__or4bb_4
+ D_N 1
+ B 1
+ A 1
+ C_N 1
+ X 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__probe_p_8
+ A 1
+ VGND 36
+ VPWR 20
+ X 2
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__probec_p_8
+ A 1
+ VGND 36
+ VPWR 20
+ X 2
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfbbn_1
+ SCD 1
+ SCE 1
+ RESET_B 1
+ CLK_N 1
+ SET_B 1
+ Q 2
+ D 1
+ Q_N 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfbbn_2
+ SCD 1
+ SCE 1
+ RESET_B 1
+ CLK_N 1
+ SET_B 1
+ Q 2
+ D 1
+ Q_N 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfbbp_1
+ SCD 1
+ SCE 1
+ RESET_B 1
+ CLK 1
+ SET_B 1
+ Q 2
+ D 1
+ Q_N 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfrbp_1
+ Q_N 2
+ SCE 1
+ SCD 1
+ D 1
+ CLK 1
+ RESET_B 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfrbp_2
+ Q_N 2
+ Q 2
+ SCE 1
+ SCD 1
+ D 1
+ CLK 1
+ RESET_B 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfrtn_1
+ SCE 1
+ SCD 1
+ D 1
+ CLK_N 1
+ RESET_B 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfrtp_1
+ SCE 1
+ SCD 1
+ D 1
+ CLK 1
+ RESET_B 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfrtp_2
+ SCE 1
+ SCD 1
+ D 1
+ CLK 1
+ RESET_B 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfrtp_4
+ SCE 1
+ SCD 1
+ D 1
+ CLK 1
+ RESET_B 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfsbp_1
+ SCD 1
+ Q_N 2
+ SET_B 1
+ SCE 1
+ D 1
+ CLK 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfsbp_2
+ SCD 1
+ Q_N 2
+ SET_B 1
+ SCE 1
+ D 1
+ CLK 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfstp_1
+ SCD 1
+ SET_B 1
+ SCE 1
+ D 1
+ CLK 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfstp_2
+ SCD 1
+ SET_B 1
+ SCE 1
+ D 1
+ CLK 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfstp_4
+ SCE 1
+ SET_B 1
+ D 1
+ CLK 1
+ SCD 1
+ Q 2
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfxbp_1
+ SCD 1
+ Q_N 2
+ D 1
+ SCE 1
+ CLK 1
+ Q 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfxbp_2
+ SCD 1
+ D 1
+ Q_N 2
+ SCE 1
+ CLK 1
+ Q 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfxtp_1
+ Q 2
+ CLK 1
+ SCE 1
+ D 1
+ SCD 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfxtp_2
+ SCD 1
+ D 1
+ SCE 1
+ CLK 1
+ Q 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdfxtp_4
+ SCD 1
+ D 1
+ SCE 1
+ CLK 1
+ Q 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdlclkp_1
+ CLK 1
+ GCLK 2
+ GATE 1
+ SCE 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdlclkp_2
+ CLK 1
+ GATE 1
+ SCE 1
+ GCLK 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sdlclkp_4
+ CLK 1
+ GATE 1
+ SCE 1
+ GCLK 2
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sedfxbp_1
+ CLK 1
+ Q_N 2
+ SCD 1
+ DE 1
+ D 1
+ Q 2
+ SCE 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sedfxbp_2
+ CLK 1
+ Q_N 2
+ SCD 1
+ DE 1
+ D 1
+ Q 2
+ SCE 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sedfxtp_1
+ CLK 1
+ SCD 1
+ DE 1
+ D 1
+ Q 2
+ SCE 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sedfxtp_2
+ CLK 1
+ SCD 1
+ DE 1
+ D 1
+ Q 2
+ SCE 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__sedfxtp_4
+ CLK 1
+ SCD 1
+ DE 1
+ D 1
+ Q 2
+ SCE 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__xnor2_1
+ B 1
+ Y 2
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__xnor2_2
+ Y 2
+ A 1
+ B 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__xnor2_4
+ Y 2
+ B 1
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__xnor3_1
+ X 2
+ B 1
+ C 1
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__xnor3_2
+ X 2
+ B 1
+ C 1
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__xnor3_4
+ X 2
+ B 1
+ C 1
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__xor2_1
+ B 1
+ X 2
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__xor2_2
+ X 2
+ B 1
+ A 1
+ VPWR 20
+ VGND 36
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__xor2_4
+ X 2
+ B 1
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__xor3_1
+ X 2
+ C 1
+ B 1
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__xor3_2
+ X 2
+ C 1
+ B 1
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
+sky130_fd_sc_hd__xor3_4
+ X 2
+ C 1
+ B 1
+ A 1
+ VGND 36
+ VPWR 20
+ VPB 67108900
+ VNB 67108884
