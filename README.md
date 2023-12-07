@@ -292,6 +292,59 @@ Use the scripts in scripts_compilation as always...
 
 ---
 
+# OpenRAM - SRAM Compilation
+
+## Setup
+
+Seguimos la [documentacion de OpenRAM](https://github.com/VLSIDA/OpenRAM/blob/stable/docs/source/basic_setup.md#go-back) donde seguimos los pasos:
+
+Clonar [repositorio](https://github.com/VLSIDA/OpenRAM)
+
+Instalar miniconda con el script incluido en el repositorio
+```
+./install_conda.sh
+```
+
+y activarlo con `source ./miniconda/bin/activate`.
+
+Como estamos usando Sky130, debes instalar open_pdk, openram te permite hacerlo con:
+```
+cd $HOME/OpenRAM
+make pdk
+```
+
+Luego instalas openRAM con:
+```
+cd $HOME/OpenRAM
+make install
+```
+
+Revisa las variables de entorno en el archivo `setpaths.sh` el cual es similar a: 
+```
+#!/bin/bash
+
+export OPENRAM_HOME="$HOME/OpenRAM/compiler"
+export OPENRAM_TECH="$HOME/OpenRAM/technology"
+export PDK_ROOT="$HOME/OpenRAM/open_pdks/sky130"
+export PYTHONPATH=$OPENRAM_HOME
+```
+
+Setear variables de entorno con `source setpaths.sh`.
+
+## Usage
+
+Puedes encontrar el [uso basico de OpenRAM](https://github.com/VLSIDA/OpenRAM/blob/stable/docs/source/basic_usage.md) en la misma documentacion, pero en resumen:
+
+Una vez hecho el setup y con  `source ./miniconda/bin/activate` y `source setpaths.sh` activos, puedes correr OpenRAM en el siguiente script:
+
+```
+python3 $OPENRAM_HOME/../sram_compiler.py myconfig_sky130_32.py
+```
+
+`myconfig_sky130_32.py`, archivo que se encuentra en `openram/myconfig_sky130_32.py`, describe una SRAM de singleport de 32 palabras de 32 bits cada una.
+
+---
+
 # EXTRA - WINDOWS 10/11 SYNOPSYS SERVER CONNECTION
 
 
@@ -370,62 +423,6 @@ Use the scripts in scripts_compilation as always...
 
 * Five Stage Pipeline RISC-V by Mario - RVSCC: `https://git.1159.cl/Mario1159/RVSCC`
 
+* SRAM Generators fixes: `https://cornell-ece5745.github.io/ece5745-tut8-sram/`
 
-
---- 
-
-# INTENTOS REUNION
-
-* VSS y VDD ahora son inout.
-
-* No hay errores en la sintesis.
-
-* Creamos el power ring con estos comandos
-
-``` 
-create_pg_ring_pattern ring_pattern -horizontal_layer met1 -horizontal_width {0.48} -horizontal_spacing {0.24} -vertical_layer met2 -vertical_width {0.48} -vertical_spacing {0.24}
-set_pg_strategy core_ring -pattern {{name: ring_pattern} {nets: {VPWR VGND}} {offset: {3 3}}} -core
-compile_pg -strategies core_ring 
-
-```
-
-No se conecta a los rieles creados anteriormente con este comando
-
-```
-create_pg_std_cell_conn_pattern rail_pattern -layer met1 
-set_pg_strategy M1_rails -core -pattern {{name : rail_pattern}{nets: VPWR VGND}}
-set_app_options -name plan.pgroute.ignore_signal_route -value true 
-compile_pg -strategies M1_rails
-
-```
-
-* hacemos el placement de todos los piens con este comando
-
-```
-place_pins -self -ports [get_ports *]
-```
-
-pd: al usar `get_ports VSS` o VDD si existe, por lo que el comando si deberia tomarlos para hacer el placement.
-
-* Intentamos crear voltage area con comando 
-```
-create_voltage_area -power_domains TOP -region {{5 5} {70 48}} -power VPWR -ground VGND -name VA1
-```
-No funciono en el flujo, pero si dentro de la gui.
- 
-
-* Intentamos rutear la red de power (luego de crear la VA)
-
-```
-route_group -nets VPWR
-```
-
-      Information: Routes in non-preferred voltage areas = 0 (ZRT-559)
-
-  No funciono.
-
-* Intentamos usar el comando `create_secondary_pg_placement_constraints -name pg_cstr0 -supply VPWR -voltage_areas DEFAULT_VA -region {{0 115} {0 75}}` sin resultados.
-
- `Error: Supply 'VPWR' is domain primary of voltage area 'DEFAULT_VA'. (MV-252)`
-
-
+* OpenmRAM: `https://github.com/VLSIDA/OpenRAM`
