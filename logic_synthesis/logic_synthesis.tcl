@@ -9,12 +9,17 @@ set_app_var link_library "* $target_library $synthetic_library"
 ## RTL Reading and Link
 
 ## picorv32
-analyze -format verilog { ../test_code/main.v ../test_code/picorv32.v  }
-elaborate main
+#analyze -format verilog { ../test_code/main.v }
+#elaborate main
+
+
+## picorv32
+#analyze -format verilog { ../test_code/main.v ../test_code/picorv32.v  }
+#elaborate main
 
 ## villano
-#analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
-#elaborate top_risc
+analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
+elaborate top_risc
 
 #analyze -format sverilog { ../villano/alu.sv ../villano/aludec.sv ../villano/control_unit.sv ../villano/Decode.sv ../villano/dmem.sv ../villano/Execute.sv ../villano/extend.sv ../villano/Fetch.sv ../villano/hazard_unit.sv ../villano/imem.sv ../villano/maindec.sv ../villano/Mem_data.sv ../villano/mux2.sv ../villano/mux3.sv ../villano/regfile.sv ../villano/top_risc.sv ../villano/Wrback.sv }
 #elaborate hazard_unit

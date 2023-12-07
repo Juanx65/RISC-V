@@ -4,7 +4,7 @@ module sram_32_32_sky130A(
   );
 
   parameter DATA_WIDTH = 32 ;
-  parameter ADDR_WIDTH = 5 ;
+  parameter ADDR_WIDTH = 6 ;
   parameter RAM_DEPTH = 1 << ADDR_WIDTH;
 
   // CHANGE THIS!

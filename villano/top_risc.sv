@@ -1,6 +1,9 @@
 module top_risc(
     input logic clk,
     input logic rstn,
+    input logic [31:0] imem_din,
+    input logic [31:0] imem_addr,
+    input logic imem_web,
     output logic [31:0] wr_dataM,
     output logic [31:0] ALU_resultM,
     output logic mem_wrM
@@ -19,8 +22,6 @@ Fetch fetch(.*);
 
 //DECODE
 logic flushE;
-
-
 logic [31:0] resultW;
 logic [4:0] rdW;
 logic reg_wrE;
@@ -30,23 +31,15 @@ logic jumpE;
 logic branchE;
 logic [2:0] ALU_ctrlE;
 logic ALU_srcE;
-  
 logic [4:0] rs1E, rs2E, rdE, rs1D, rs2D;
 logic [31:0] rd1E, rd2E, PCE, imm_extE, PCp4E;
 Decode decode(.*);
 
 //EXECUTE
-
 logic result_srcE0;
 logic [1:0] fwdAE, fwdBE;
-  
 logic reg_wrM;
 logic [1:0] result_srcM;
-
-
-
-
-
 logic PC_srcE;
 logic [31:0] PCp4M;
 logic [4:0] rdM;
@@ -58,8 +51,6 @@ logic [1:0] result_srcW;
 Mem_data mem_data(.*);
 
 //WRITEBACK
-
-
 Wrback wrback(.*);
 
 //HAZARD UNIT

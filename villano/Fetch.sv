@@ -4,6 +4,9 @@ module Fetch(
     input logic [31:0] PC_targetE, 
     input logic stallF, stallD, flushD,
     input logic PC_srcE,
+    input logic [31:0] imem_din,
+    input logic [31:0] imem_addr,
+    input logic imem_web,
     output logic [31:0] instrD,
     output logic [31:0] PCD, PCp4D
     
@@ -14,16 +17,22 @@ logic [31:0] PCF_new, instrF;
 
 mux2 #(32) pcmux(PCp4F, PC_targetE, PC_srcE, PCF_new);   
 assign PCp4F = PCF + 'd4;
-imem instr_memory(PCF, instrF);
-
-/* sram_32_32_sky130A imem(
+//imem instr_memory(PCF, instrF);
+parameter ADDR_WIDTH = 5;
+logic [31:0] mem_addr_temp;
+logic [31:0] mem_addr_temp2;
+logic [ADDR_WIDTH-1:0] mem_addr;
+assign mem_addr_temp = imem_web ? PCp4F : imem_addr;
+assign mem_addr_temp2 = mem_addr_temp >> 2;
+assign mem_addr = mem_addr_temp2[ADDR_WIDTH-1:0];
+sram_32_32_sky130A imem(
 		.clk0(clk),
-		.addr0({1'b0,imem_addr}),
-		.din0(imem_wdata),//debería venir de la uart
-		.dout0(imem_rdata),
+		.addr0({1'b0,mem_addr}),
+		.din0(imem_din),//debería venir de la uart
+		.dout0(instrF),
 		.csb0(1'b0),
 		.web0(imem_web) //depende de la uart
-	); */
+	);
 
 always_ff @(posedge clk)
 begin
