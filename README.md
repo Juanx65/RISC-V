@@ -343,6 +343,26 @@ python3 $OPENRAM_HOME/../sram_compiler.py myconfig_sky130_32.py
 
 where `myconfig_sky130_32.py`, a file found in `openram/myconfig_sky130_32.py`, describes a singleport SRAM of 32 words, 32 bits each.
 
+
+## Note
+
+We encountered some issues with OpenRAM:
+
+* To utilize `tech_name = "sky130A"` in the `myconfig_sky130_32.py` file, it was necessary to modify line 614 in `compiler/characterizer/simulation.py` by adding an `A`, as shown below:
+
+```
+# FIXME: change to a solution that does not depend on the technology
+ if OPTS.tech_name == "sky130A" and len(self.all_ports) == 1:
+```
+
+* Had to be aware of the naming and PATH of `OpenRAM` (NO openram) to be at `$HOME/OpenRAM`.
+
+* Be aware, there are extra ports that OpenRAM generates for no reason. for the tool to actually generate the SRAM for the sky130 tec we had to use the single port config where those lines are a must.
+```
+num_spare_rows = 1
+num_spare_cols = 1
+```
+
 ---
 
 # EXTRA - WINDOWS 10/11 SYNOPSYS SERVER CONNECTION
