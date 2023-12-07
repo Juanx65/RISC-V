@@ -409,7 +409,7 @@ lc_shell>  create_frame
 We repeat:
 
 ```
-write_physical_lib
+lc_shell>  write_physical_lib
 ```
 
 This should return `... wrote physical library physucal_lib_name.ndm`
