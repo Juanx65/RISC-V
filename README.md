@@ -296,30 +296,30 @@ Use the scripts in scripts_compilation as always...
 
 ## Setup
 
-Seguimos la [documentacion de OpenRAM](https://github.com/VLSIDA/OpenRAM/blob/stable/docs/source/basic_setup.md#go-back) donde seguimos los pasos:
+We follow the [OpenRAM documentation](https://github.com/VLSIDA/OpenRAM/blob/stable/docs/source/basic_setup.md#go-back) where we proceed with the steps:
 
-Clonar [repositorio](https://github.com/VLSIDA/OpenRAM)
+Clone the [repository](https://github.com/VLSIDA/OpenRAM)
 
-Instalar miniconda con el script incluido en el repositorio
+Install miniconda using the script included in the repository:
 ```
 ./install_conda.sh
 ```
 
-y activarlo con `source ./miniconda/bin/activate`.
+and activate it with `source ./miniconda/bin/activate`.
 
-Como estamos usando Sky130, debes instalar open_pdk, openram te permite hacerlo con:
+As we are using Sky130, you must install open_pdk, and OpenRAM allows you to do it with:
 ```
 cd $HOME/OpenRAM
 make pdk
 ```
 
-Luego instalas openRAM con:
+Then, install OpenRAM with:
 ```
 cd $HOME/OpenRAM
 make install
 ```
 
-Revisa las variables de entorno en el archivo `setpaths.sh` el cual es similar a: 
+Check the environment variables in the `setpaths.sh` file, which is similar to:
 ```
 #!/bin/bash
 
@@ -329,19 +329,19 @@ export PDK_ROOT="$HOME/OpenRAM/open_pdks/sky130"
 export PYTHONPATH=$OPENRAM_HOME
 ```
 
-Setear variables de entorno con `source setpaths.sh`.
+Set the environment variables with `source setpaths.sh`.
 
 ## Usage
 
-Puedes encontrar el [uso basico de OpenRAM](https://github.com/VLSIDA/OpenRAM/blob/stable/docs/source/basic_usage.md) en la misma documentacion, pero en resumen:
+You can find the [basic usage of OpenRAM](https://github.com/VLSIDA/OpenRAM/blob/stable/docs/source/basic_usage.md) in the same documentation, but in summary:
 
-Una vez hecho el setup y con  `source ./miniconda/bin/activate` y `source setpaths.sh` activos, puedes correr OpenRAM en el siguiente script:
+Once the setup is done and with `source ./miniconda/bin/activate` and `source setpaths.sh` active, you can run OpenRAM in the following script:
 
 ```
 python3 $OPENRAM_HOME/../sram_compiler.py myconfig_sky130_32.py
 ```
 
-`myconfig_sky130_32.py`, archivo que se encuentra en `openram/myconfig_sky130_32.py`, describe una SRAM de singleport de 32 palabras de 32 bits cada una.
+where `myconfig_sky130_32.py`, a file found in `openram/myconfig_sky130_32.py`, describes a singleport SRAM of 32 words, 32 bits each.
 
 ---
 
