@@ -42,7 +42,8 @@ module testbench;
     // Secuencia de instrucciones 
     // Añade aquí las instrucciones con tiempos y señales adecuadas.
     // Ejemplo:
-    #20 imem_wdata = 32'h00500113; imem_web = 0; imem_addr_input = 32'd0;
+    
+    #30 imem_wdata = 32'h00500113; imem_web = 0; imem_addr_input = 32'd0;
     #20 imem_wdata = 32'h00C00193; imem_web = 0; imem_addr_input = 32'd4;
     #20 imem_wdata = 32'hFF718393; imem_web = 0; imem_addr_input = 32'd8;
     #20 imem_wdata = 32'h0023E233; imem_web = 0; imem_addr_input = 32'd12;
@@ -50,38 +51,36 @@ module testbench;
     #20 imem_wdata = 32'h004282B3; imem_web = 0; imem_addr_input = 32'd20;
     #20 imem_wdata = 32'h02728863; imem_web = 0; imem_addr_input = 32'd24;
     #20 imem_wdata = 32'h0041A233; imem_web = 0; imem_addr_input = 32'd28;
-    #20 imem_wdata = 32'h0041A233; imem_web = 0; imem_addr_input = 32'd32;
-    #20 imem_wdata = 32'h00020463; imem_web = 0; imem_addr_input = 32'd36;
-    #20 imem_wdata = 32'h00000293; imem_web = 0; imem_addr_input = 32'd40;
-    #20 imem_wdata = 32'h0023A233; imem_web = 0; imem_addr_input = 32'd44;
-    #20 imem_wdata = 32'h005203B3; imem_web = 0; imem_addr_input = 32'd48;
-    #20 imem_wdata = 32'h402383B3; imem_web = 0; imem_addr_input = 32'd52;
-    #20 imem_wdata = 32'h0471AA23; imem_web = 0; imem_addr_input = 32'd56;
-    #20 imem_wdata = 32'h06002103; imem_web = 0; imem_addr_input = 32'd60;
-    #20 imem_wdata = 32'h005104B3; imem_web = 0; imem_addr_input = 32'd64;
-    #20 imem_wdata = 32'h008001EF; imem_web = 0; imem_addr_input = 32'd68;
-    #20 imem_wdata = 32'h00100113; imem_web = 0; imem_addr_input = 32'd72;
-    #20 imem_wdata = 32'h00910133; imem_web = 0; imem_addr_input = 32'd76;
-    #20 imem_wdata = 32'h0221A023; imem_web = 0; imem_addr_input = 32'd80;
-    #20 imem_wdata = 32'h00210063; imem_web = 0; imem_addr_input = 32'd84;
+    #20 imem_wdata = 32'h00020463; imem_web = 0; imem_addr_input = 32'd32;
+    #20 imem_wdata = 32'h00000293; imem_web = 0; imem_addr_input = 32'd36;
+    #20 imem_wdata = 32'h0023A233; imem_web = 0; imem_addr_input = 32'd40;
+    #20 imem_wdata = 32'h005203B3; imem_web = 0; imem_addr_input = 32'd44;
+    #20 imem_wdata = 32'h402383B3; imem_web = 0; imem_addr_input = 32'd48;
+    #20 imem_wdata = 32'h0471AA23; imem_web = 0; imem_addr_input = 32'd52;
+    #20 imem_wdata = 32'h06002103; imem_web = 0; imem_addr_input = 32'd56;
+    #20 imem_wdata = 32'h005104B3; imem_web = 0; imem_addr_input = 32'd60;
+    #20 imem_wdata = 32'h008001EF; imem_web = 0; imem_addr_input = 32'd64;
+    #20 imem_wdata = 32'h00100113; imem_web = 0; imem_addr_input = 32'd68;
+    #20 imem_wdata = 32'h00910133; imem_web = 0; imem_addr_input = 32'd72;
+    #20 imem_wdata = 32'h0221A023; imem_web = 0; imem_addr_input = 32'd76;
+    #20 imem_wdata = 32'h00210063; imem_web = 0; imem_addr_input = 32'd80;
     #20 imem_web = 1'b1; 
 
     // Reset
-    #20 resetn = 1'b1;
-    #20
-    $stop;
-
-
-    /* if(mem_wrM) begin
-                if(ALU_resultM === 100 & wr_dataM === 25) begin
-                $display("Simulation succeeded");
+    #50 resetn = 1'b1;
+    end
+    
+    always_ff @(negedge clk) begin
+    if(mem_wrM) begin
+            if(ALU_resultM === 100 & wr_dataM === 25) begin
+              $display("Simulation succeeded");
+              $stop;
+            end else if (ALU_resultM !== 96) begin
+                $display("Simulation failed");
                 $stop;
-                end else if (ALU_resultM !== 96) begin
-                    $display("Simulation failed");
-                    $stop;
-                end
-            end */
-
-  end
+            end
+        end 
+      end
+  
 
 endmodule

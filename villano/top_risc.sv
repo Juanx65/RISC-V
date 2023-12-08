@@ -10,7 +10,13 @@ module top_risc(
     );
 
 logic rst;
-assign rst = ~rstn;
+logic rst1;
+logic rst2;
+assign rst1 = ~rstn;
+always_ff @(posedge clk) begin
+    rst2 <= rst1;
+end
+assign rst = rst1 || rst2;
 
 //FETCH
 logic [31:0] PC_targetE;
