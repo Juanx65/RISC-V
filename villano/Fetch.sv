@@ -38,7 +38,8 @@ sram_32_32_sky130A imem(
 		.din0(imem_din),//debería venir de la uart
 		.dout0(instrF_mem),
 		.csb0(1'b0),
-		.web0(imem_web) //depende de la uart
+		.web0(imem_web), //depende de la uart
+        .wmask0(4'b0)
 	);
 
 

@@ -29,7 +29,8 @@ sram_32_32_sky130A dmem(
 		.din0(wr_dataM), 
 		.dout0(rd_dataM),
 		.csb0(1'b0),
-		.web0(~mem_wrM)
+		.web0(~mem_wrM),
+        .wmask0(4'b0)
 	);
 always_ff @(posedge clk)
 begin
