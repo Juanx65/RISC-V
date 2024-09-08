@@ -451,8 +451,8 @@ Finally, with the `.ndm` file, we can utilize the SRAM in ICC2 for placing and r
 * Open command palette > Remote-SSH: Open SSH Configuration File.. > .../.ssh/config
 * Edit it as follows:
 
-      Host synopsys.elo.utfsm.cl
-            HostName synopsys.elo.utfsm.cl
+      Host SynopsysRemote
+            HostName ****.****.****.****
             Port 22
             User usuarioXX
             IdentityFile C:\Users\<user_name>\.ssh\id_rsa
